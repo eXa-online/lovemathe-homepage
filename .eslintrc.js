@@ -17,5 +17,8 @@ module.exports = {
     'linebreak-style': 'off',
     "indent": "off",
     "max-len": "off",
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "@typescript-eslint/no-var-requires": "off",
   },
 };
