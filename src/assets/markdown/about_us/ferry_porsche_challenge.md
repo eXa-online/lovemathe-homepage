@@ -1,0 +1,6 @@
+1,2 Million Euro für die Digitalisierung von Schulen in Baden-Württemberg und Sachsen
+Die Ferry-Porsche-Stiftung rief unter der Schirmherrschaft der Staatsministerin für Digitalisierung, Dorothee Bär, zur zweiten Ferry Porsche Challenge auf. Diesmal unter dem Motto: Schule digital gestalten. Teilnehmen konnten alle Schulen aus den Bundesländern Baden-Württemberg und Sachsen. Ziel war es, die Digitalisierung in den Schulen voranzutreiben. Knapp 300 Bewerbungen sind vom 9. November 2020 bis zum 16. April 2021 bei der Stiftung eingegangen.
+
+Aus den eingegangenen Bewerbungen traf die Ferry-Porsche-Stiftung eine Auswahl von 29 Projekten für das Finale. Dort präsentierten die Teams ihr Konzept in einem digitalen Elevator Pitchformat dem Expertenkreis. Über die Platzierungen entschied anschließend in einer weiteren Auswahlrunde eine hochkarätig besetzte Jury.
+Neben den Platzierungen wurden zwei Sonderpreise für besonderes Engagement und zwei Standortpreise an gering ausgestattete Schulen in Stuttgart und Leipzig verliehen. Die ausgezeichneten Projekte wurden mit Fördergeldern in Höhe von insgesamt 1,2 Million Euro unterstützt.
+Mit unserer Idee konnten wir 1 von 6 zweiten Plätzen belegen!

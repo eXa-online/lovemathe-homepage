@@ -1,18 +1,48 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <PageHeader
+      ctaText="Testspiel starten"
+      cta-link="/game"
+      image-source="header_background.jpg"
+      headingText="LOVEMATHE"
+      teaserSource="header/header_teaser.md"
+    />
+    <YoutubeEmbed
+      videoSource="https://www.youtube-nocookie.com/embed/CsCCcuqeid0"
+    />
+    <PlayTheGame />
+    <AboutUs />
+    <TestInstruction />
+    <ProjectDocumentation />
+
   </div>
 </template>
 
 <script lang="ts">
+import YoutubeEmbed from '@/components/YoutubeEmbed.vue';
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import PageHeader from '@/components/PageHeader.vue';
+import PlayTheGame from '@/components/PlayTheGame.vue';
+import AboutUs from '@/components/AboutUs.vue';
+import TestInstruction from '@/components/TestInstruction.vue';
+import ProjectDocumentation from '@/components/ProjectDocumentation.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld,
-  },
+    PageHeader,
+    YoutubeEmbed,
+    PlayTheGame,
+    AboutUs,
+    TestInstruction,
+    ProjectDocumentation,
+},
 });
 </script>
+
+<style scoped>
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
