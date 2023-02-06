@@ -8,7 +8,7 @@
         teaser-text="Hier geht es direkt zu unserem Testspiel. Nur ein Klick entfernt." button-text="Testspiel starten"
         button-link="https://lovemathe.de" v-bind:button-enabled="true" />
       <StartGameElement heading-text="Fördern" image-source="foerdern_muschel.svg"
-        teaser-text="Wenn der Test auf einem Gebiet nicht erfolgreich war, gibt es hier die Möglichkeit durch gezielte Förderspiele an eine Verbesserung zu arbeiten."
+        teaser-text="Wenn der Test auf einem Gebiet nicht erfolgreich war, gibt es hier die Möglichkeit durch gezielte Förderspiele an einer Verbesserung zu arbeiten."
         button-text="Förderspiel starten" button-link="" v-bind:button-enabled="false" />
     </div>
   </div>
