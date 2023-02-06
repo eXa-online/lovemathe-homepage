@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c81bb76be66cf1e74bc8",
+    "revision": "92429af33f15a34a0a95",
     "url": "/lovemathe-homepage/css/app.1c6d38c9.css"
   },
   {
@@ -44,12 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lovemathe-homepage/img/testen_sonne.7af234ab.svg"
   },
   {
-    "revision": "d061c1383546103358fb7f9197819c59",
+    "revision": "c9736d6e4794ab545df2aac69f24b004",
     "url": "/lovemathe-homepage/index.html"
   },
   {
-    "revision": "c81bb76be66cf1e74bc8",
-    "url": "/lovemathe-homepage/js/app.06e5de6c.js"
+    "revision": "92429af33f15a34a0a95",
+    "url": "/lovemathe-homepage/js/app.4f5e77b3.js"
   },
   {
     "revision": "babed672c0e5800f5291",
