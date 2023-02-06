@@ -1,12 +1,18 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link v-scroll-to="'#game'" to="#">Starten</router-link>
+    <router-link v-scroll-to="'#about'" to="#">Über</router-link>
+    <router-link v-scroll-to="'#instructions'" to="#">Anleitung</router-link>
+    <router-link v-scroll-to="'#documentation'" to="#">Dokumentation</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +21,51 @@
   color: #2c3e50;
 }
 
+@font-face {
+  font-family: 'Rubik';
+  src: url(./assets/fonts/Rubik-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(./assets/fonts/Rubik-Bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kiwi-Days';
+  src: url(./assets/fonts/Kiwi-Days.woff2) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 #nav {
-  padding: 30px;
+  margin: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(180deg, rgba(58, 80, 83, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: #FFFFFF;
+  margin-right: 5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Rubik';
+  font-weight: 700;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#nav a:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
+
 </style>

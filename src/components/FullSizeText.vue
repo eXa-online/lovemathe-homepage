@@ -29,7 +29,6 @@ export default defineComponent({
     textSource: {
       required: true,
       type: String,
-      default: 'generic/lorem.md',
     },
   },
 });
