@@ -1,6 +1,6 @@
 <template>
   <div id="instructions" class="test_instruction">
-    <h2 class="test_instruction--heading">Anleitungen</h2>
+    <h2 class="test_instruction--heading">Anleitung</h2>
     <FullSizeText heading="Testanleitung" textSource="instruction/test_instruction.md" />
     <FullSizeText heading="Auswertung" textSource="instruction/evaluation.md" />
     <FullSizeImage image-source="test_instruction.jpg" alt-text="Testanleitung" />
