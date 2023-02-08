@@ -1,8 +1,7 @@
 <template>
   <div class="video_hero">
-    <iframe width="1120" height="630" :src="videoSource" title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
+    <iframe width="1120" height="630" :src="videoSource" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
   </div>
 </template>
@@ -11,7 +10,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'YoutubeEmbed',
+  name: 'VideoEmbed',
   props: {
     videoSource: {
       required: true,
