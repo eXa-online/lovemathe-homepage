@@ -7,7 +7,14 @@ module.exports = {
           test: /\.md$/i,
           use: 'raw-loader',
         },
-      ],
+      ]
+    },
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: '@import "@/assets/css/settings.scss";',
+      },
     },
   },
 };
