@@ -37,7 +37,7 @@ body {
 
 @font-face {
   font-family: 'Kiwi-Days';
-  src: url(./assets/fonts/Kiwi-Days.woff2) format('woff');
+  src: url(./assets/fonts/Kiwi-Days.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
 }
