@@ -1,9 +1,7 @@
 <template>
   <div class="overlayBtn" v-on:click="openOverlay()"></div>
-
   <div :class="{ active: isActive }" class="overlay" v-on:click="closeOverlay()">
     <p class="overlay__text">We Respect<br>Your Privacy</p>
-
     <div>
       <div class="overlay__bigText overlay__space">no</div>
       <div class="overlay__bigText">cookies</div>
@@ -12,11 +10,10 @@
       <div class="overlay__bigText overlay__space">no</div>
       <div class="overlay__bigText">access logs</div>
     </div>
-
     <div class="close">
       <div class="close__button"></div>
     </div>
-  </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -56,14 +53,13 @@ export default defineComponent({
   transform: translate(-50%, -50%);
 
   @media #{$mobile} {
-    top: 1rem;
-    right: 1rem;
+    top: 20%;
+    left: 25%;
   }
 
   @media #{$tablet-portrait} {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 15%;
+    left: 20%;
   }
 
   @media #{$tablet} {
@@ -88,23 +84,32 @@ export default defineComponent({
   z-index: -1;
   cursor: pointer;
   transform: translate(-50%, -50%);
-  transform-origin: center center;
 
   @media #{$mobile} {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    top: 45%;
     opacity: 0;
-    transform: scaleY(0.75) translateY(-5rem);
-    transition: all 0.3s;
+    transform: scaleY(0.75) translateY(-5rem) translate(-50%, -50%);
+    transition: all 0.4s;
+    width: 100%;
+    height: 70%;
+    padding: 0;
+    transform-origin: center center;
   }
 
   @media #{$tablet-portrait} {
     position: absolute;
-    top: 50%;
     left: 50%;
-    color: red;
+    top: 50%;
+    opacity: 0;
+    transform: scaleY(0.75) translateY(-5rem) translate(-50%, -50%);
+    transition: all 0.3s;
+    z-index: -1;
+    width: 50%;
+    height: 50%;
+    border-radius: 10%;
+    transform-origin: center center;
   }
 
   @media #{$min-tablet} {
@@ -113,15 +118,14 @@ export default defineComponent({
     width: 16rem;
     border-radius: 16rem;
     transform: scale(0) translate(-50%, -50%);
-    transform-origin: center center;
     transition: transform 0.5s, left 0.5s;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-    z-index: 4;
+    z-index: 3;
   }
 
   @media #{$desktop} {
     top: calc(40% - 8rem);
-    left: calc(20% - 8mediarem);
+    left: calc(20% - 8rem);
   }
 }
 
@@ -129,10 +133,15 @@ export default defineComponent({
   z-index: 5;
   opacity: 1;
   transform: scale(1) translateY(0) translate(-50%, -50%);
-  transform-origin: center center;
 
   @media #{$min-tablet} {
     left: 20%;
+  }
+
+  @media #{$tablet-portrait} {
+    left: 50%;
+    top: 50%;
+    z-index: 5;
   }
 }
 
@@ -155,6 +164,11 @@ export default defineComponent({
   @media #{$mobile} {
     font-size: 3rem;
     line-height: 3rem;
+  }
+
+  @media #{$tablet-portrait} {
+    font-size: 3rem;
+    line-height: 4rem;
   }
 
   @media #{$min-tablet} {
@@ -205,6 +219,12 @@ export default defineComponent({
   @media #{$mobile} {
     display: flex;
     margin-top: 3rem;
+    margin-right: 3rem;
+  }
+
+  @media #{$tablet-portrait} {
+    display: flex;
+    margin-top: 3rem;
   }
 
   @media #{$min-tablet} {
@@ -217,6 +237,13 @@ export default defineComponent({
   background: url("../assets/img/badge-close.svg") center / 100% no-repeat;
 
   @media #{$mobile} {
+    display: flex;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @media #{$tablet-portrait} {
     display: flex;
     margin-left: auto;
     width: 2rem;
