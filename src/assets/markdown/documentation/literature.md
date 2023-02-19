@@ -1,1 +1,12 @@
-Lorem lorem lorem
+* Oskar Fibel / Schulvorbereitungsheft (2010)
+* Mathefreunde - {Nord/Süd} - alle Ausgaben / Vorübungen - Die kleinen Mathefreunde; E. Hajek (2010)
+* Die diagnostische Eigenschätzskalen ({DES}) zur Beurteilung des Entwicklungsstandes und der Schulfähigkeit; K. Barth (2005)
+* Bereit für die Schule?: ein Schnellverfahren zur Überprüfung des Lern- und Entwicklungsstandes von Kindern zum Schuleintritt ; Primarstufe; H. Probst (2004)
+* Reif für die Schule; E. Steffan (2001)
+* Rechenstörungen; S. Kaufmann and S. Wessolowski (2006)
+* Handbuch Rechenschwächec(2017)
+* Diagnostik von Rechenstörungen; C. Jacobs and F. Petermann (2005)
+* Vorhersage von Rechenschwäche in der Grundschule; K. Krajewski (2008)
+* MBK 0 - Test mathematischer Basiskompetenzen in Kindergartenalter : Manual; K. Krajewski (2018)
+* Mathematik: für alle von Anfang an!; R. Kornmann (2010)
+* Arithmetische Grundlagen spielend fördern; S. Friedl, S. Reinhold, und B. Rudolph (2019)
