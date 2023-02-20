@@ -65,17 +65,24 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .play_game--item {
   display: flex;
   background-color: #ADE3EA;
-  max-height: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-self: center;
   margin-left: 20px;
   margin-right: 20px;
+  box-sizing: border-box;
+
+  @media #{$mobile} {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 2rem;
+  }
 }
 
 .play_game--heading__h3 {
@@ -83,14 +90,21 @@ export default defineComponent({
   font-weight: 400;
   color: #0D5B67;
   font-size: 24px;
+
+  @media #{$mobile} {
+  }
 }
 
 .play_game--image {
   display: flex;
-  width: 40vh;
-  height: 60vh;
+  width: 80%;
+  height: 100%;
   justify-content: center;
   align-items: center;
+
+  @media #{$mobile} {
+    height: 100%;
+  }
 }
 
 .play_game--cta__button {
@@ -100,13 +114,19 @@ export default defineComponent({
   border-radius: 50px;
   color: white;
   height: 6rem;
-  width: 16em;
+  width: 30rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: 'Rubik';
   font-weight: 700;
   font-size: 2em;
+
+  @media #{$mobile} {
+    width: 20rem;
+    height: 4rem;
+    font-size: 1.5em;
+  }
 }
 
 .play_game--cta__button:disabled {
@@ -118,9 +138,14 @@ export default defineComponent({
   font-weight: '400';
   width: 25rem;
   display: inline-block;
-  font-size: 14px;
+  font-size: 1rem;
   color: #0D5B67;
   padding-top: 5%;
   height: 10rem;
+
+  @media #{$mobile} {
+    width: 80%;
+    font-size: 1rem;
+  }
 }
 </style>

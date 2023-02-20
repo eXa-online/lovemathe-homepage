@@ -20,13 +20,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .video_hero {
   display: flex;
   background-color: #D6ECEE;
-  height: 100vh;
+  height: 75rem;
   width: 100%;
   align-items: center;
   justify-content: center;
+
+  @media #{$mobile} {
+    height: 30rem;
+  }
 }
 </style>

@@ -55,6 +55,8 @@ export default defineComponent({
   @media #{$mobile} {
     top: 20%;
     left: 25%;
+    width: 5rem;
+    height: 5rem;
   }
 
   @media #{$tablet-portrait} {
@@ -94,6 +96,7 @@ export default defineComponent({
     transition: all 0.4s;
     width: 100%;
     height: 70%;
+    min-height: 35rem;
     padding: 0;
     transform-origin: center center;
   }
@@ -130,7 +133,7 @@ export default defineComponent({
 }
 
 .overlay.active {
-  z-index: 5;
+  z-index: 101;
   opacity: 1;
   transform: scale(1) translateY(0) translate(-50%, -50%);
 

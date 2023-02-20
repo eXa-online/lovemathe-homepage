@@ -26,25 +26,35 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .play_game {
   display: flex;
   flex-direction: column;
   background-color: #ADE3EA;
-  height: 100vh;
+  height: 52rem;
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 3rem;
+
+  @media #{$mobile} {
+    height: 80rem;
+  }
 }
 
 .play-game--item__container {
   display: flex;
   flex-direction: row;
-  max-height: 70%;
+
+  @media #{$mobile} {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .play_game--heading {
-  padding-top: 5vh;
+  line-height: 0;
+  padding-top: 1.5rem;
 }
 
 .play_game--heading__h2 {

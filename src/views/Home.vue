@@ -2,14 +2,14 @@
   <div class="home">
     <CookieButton />
     <PageHeader
-      ctaText="Testspiel starten"
-      cta-link="/game"
+      ctaText="Zum Testspiel"
+      cta-link="#game"
       image-source="header_background.jpg"
       headingText="LOVEMATHE"
       teaserSource="header/header_teaser.md"
     />
     <VideoEmbed
-      videoSource="https://player.vimeo.com/video/796631211?h=fcf59ebfa8&color=ff9933&byline=0&portrait=0&dnt=1"
+      videoSource="https://player.vimeo.com/video/796631211?h=fcf59ebfa8&color=ff9933&byline=0&portrait=0&dnt=true"
     />
     <PlayTheGame />
     <AboutUs />
