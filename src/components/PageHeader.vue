@@ -11,7 +11,7 @@
       </div>
       <div class="header--cta">
         <a :href="ctaLink">
-          <button v-scroll-to="'#game'" class="header--cta__button">
+          <button v-scroll-to="ctaLink" class="header--cta__button">
             {{ ctaText }}
           </button>
         </a>
@@ -65,10 +65,16 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media #{$mobile} {
+    background-position: 70%;
+  }
 }
 
 .header--teaser {
@@ -78,6 +84,25 @@ export default defineComponent({
       rgba(214, 236, 238, 0) 0%,
       rgba(214, 236, 238, 0.354167) 48.96%,
       #d6ecee 100%);
+}
+
+.header--title {
+  padding-top: 20%;
+
+  @media #{$mobile} {
+    padding-top: 100%;
+  }
+}
+
+.header--title__heading {
+  font-family: "Kiwi-Days";
+  font-weight: 400;
+  color: #0d5b67;
+  font-size: 4rem;
+
+  @media #{$mobile} {
+    font-size: 2.5rem;
+  }
 }
 
 .header--cta__button {
@@ -94,26 +119,25 @@ export default defineComponent({
   font-weight: 700;
   font-size: 1.2em;
   cursor: pointer;
-}
 
-.header--title {
-  padding-top: 20%;
-}
-
-.header--title__heading {
-  font-family: "Kiwi-Days";
-  font-weight: 400;
-  color: #0d5b67;
-  font-size: 4rem;
+  @media #{$mobile} {
+    width: 80%;
+    height: 3rem;
+  }
 }
 
 .header--text {
   font-family: "Rubik";
-  font-weight: "400";
+  font-weight: "500";
   width: 50%;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #0d5b67;
   padding-top: 5%;
+
+  @media #{$mobile} {
+    font-size: 1rem;
+    width: 80%;
+  }
 }
 </style>

@@ -34,9 +34,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .full_size_text {
-  max-width: 60vw;
+  max-width: 60%;
   margin-bottom: 50px;
 }
 
@@ -44,7 +44,12 @@ export default defineComponent({
   font-family: Kiwi-Days;
   font-weight: 400;
   color: #0d5b67;
-  font-size: 28px;
+  font-size: 1.8rem;
+
+  @media #{$mobile} {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+  }
 }
 
 .full_size_text--body {

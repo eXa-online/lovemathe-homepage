@@ -8,7 +8,7 @@
   <router-view />
 </template>
 
-<style>
+<style lang="scss">
 body {
   margin: 0;
   padding: 0;
@@ -44,15 +44,21 @@ body {
 
 #nav {
   margin: none;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   text-align: right;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   background: linear-gradient(180deg, rgba(58, 80, 83, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+
+  @media #{$mobile} {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 #nav a {
@@ -62,6 +68,13 @@ body {
   text-transform: uppercase;
   font-family: 'Rubik';
   font-weight: 700;
+
+  @media #{$mobile} {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
 }
 
 #nav a:hover {

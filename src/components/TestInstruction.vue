@@ -21,7 +21,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .test_instruction {
   display: flex;
   flex-direction: column;
@@ -35,5 +35,9 @@ export default defineComponent({
   font-weight: 400;
   font-size: 2.8rem;
   color: #0D5B67;
+
+  @media #{$mobile} {
+    font-size: 1.8rem;
+  }
 }
 </style>

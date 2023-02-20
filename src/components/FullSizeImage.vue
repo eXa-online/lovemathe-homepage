@@ -34,7 +34,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .full_size_image {
   display: flex;
   flex-direction: column;
@@ -45,8 +45,8 @@ export default defineComponent({
 }
 
 .full_size_image--image {
-  width: 60vw;
-  height: 25vw;
+  width: 60%;
+  height: 8rem;
   object-fit: cover;
 }
 
@@ -54,6 +54,11 @@ export default defineComponent({
   font-family: Kiwi-Days;
   font-weight: 400;
   color: #0d5b67;
-  font-size: 28px;
+  font-size: 1.8rem;
+
+  @media #{$mobile} {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+  }
 }
 </style>
