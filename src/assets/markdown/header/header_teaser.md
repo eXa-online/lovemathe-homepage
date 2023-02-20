@@ -1,1 +1,2 @@
-Bei vielen Kindern mit Rechenschwierigkeiten werden diese frühestens gegen Ende des 2. Schuljahres festgestellt, häufig sogar erst in der weiterführenden Schule. Auf dieser Seite finden sich Tests in Form von digitalen Spielen, die helfen sollen, Kinder mit Rechenschwierigkeiten zu identifizieren und anschließend zu fördern.
+Spielend gegen Matheangst.
+Hier können sie mit einem unverbindlichen Test herausfinden, ob ihr Kind mit Rechenschwierigkeiten zu kämpfen hat.
