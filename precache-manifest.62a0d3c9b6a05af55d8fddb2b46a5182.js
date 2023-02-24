@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "256cb2b959707e7761a0",
-    "url": "/css/app.344adc71.css"
+    "revision": "fe93eebea267b3915ed7",
+    "url": "/css/app.bc22d8d3.css"
   },
   {
     "revision": "8511ee7eea74e7ef023d64e303808dd2",
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/testen_sonne.7af234ab.svg"
   },
   {
-    "revision": "01d15b2b9d2715bcee27f08077da1fbc",
+    "revision": "703c1a78e098f89219dc53e01e047c5a",
     "url": "/index.html"
   },
   {
-    "revision": "256cb2b959707e7761a0",
-    "url": "/js/app.62f67ec7.js"
+    "revision": "fe93eebea267b3915ed7",
+    "url": "/js/app.2fa2f77e.js"
   },
   {
     "revision": "ea5f0a4a5e41f5ead363",
