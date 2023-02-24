@@ -4,7 +4,7 @@
       {{ headingText }}
     </h3>
     <img class="full_size_image--image" :src="image" :alt="altText" />
-  </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -46,8 +46,12 @@ export default defineComponent({
 
 .full_size_image--image {
   width: 60%;
-  height: 8rem;
+  height: 35rem;
   object-fit: cover;
+
+  @media #{$mobile} {
+    height: 8rem;
+  }
 }
 
 .full_size_image--heading {
