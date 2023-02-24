@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lovemathe-homepage/img/testen_sonne.7af234ab.svg"
   },
   {
-    "revision": "cfb51c7c52f3600e836ecf6ff0f7ed0f",
+    "revision": "6374467334bee5c9ff403af77f126807",
     "url": "/lovemathe-homepage/index.html"
   },
   {
