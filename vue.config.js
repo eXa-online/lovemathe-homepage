@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/lovemathe-homepage/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/lovemathe-homepage/',
   configureWebpack: {
     module: {
       rules: [
@@ -7,7 +7,18 @@ module.exports = {
           test: /\.md$/i,
           use: 'raw-loader',
         },
-      ]
+        {
+          test: /\.pdf$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                encoding: false,
+              }
+            },
+          ],
+        },
+      ],
     },
   },
   css: {
