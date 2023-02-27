@@ -1,14 +1,14 @@
 <template>
   <div class="overlayBtn" v-on:click="openOverlay()"></div>
   <div :class="{ active: isActive }" class="overlay" v-on:click="closeOverlay()">
-    <p class="overlay__text">We Respect<br>Your Privacy</p>
+    <p class="overlay__text">Wir respektieren<br>Ihre Privatsphäre</p>
     <div>
-      <div class="overlay__bigText overlay__space">no</div>
-      <div class="overlay__bigText">cookies</div>
-      <div class="overlay__bigText overlay__space">no</div>
-      <div class="overlay__bigText">tracking</div>
-      <div class="overlay__bigText overlay__space">no</div>
-      <div class="overlay__bigText">access logs</div>
+      <div class="overlay__bigText overlay__space">keine</div>
+      <div class="overlay__bigText">Cookies</div>
+      <div class="overlay__bigText overlay__space">kein</div>
+      <div class="overlay__bigText">Tracking</div>
+      <div class="overlay__bigText overlay__space">keine</div>
+      <div class="overlay__bigText">Zugriffsprotokolle</div>
     </div>
     <div class="close">
       <div class="close__button"></div>
@@ -165,7 +165,7 @@ export default defineComponent({
   transform: scale(0);
 
   @media #{$mobile} {
-    font-size: 3rem;
+    font-size: 2.2rem;
     line-height: 3rem;
   }
 
@@ -175,8 +175,8 @@ export default defineComponent({
   }
 
   @media #{$min-tablet} {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
   }
 }
 
