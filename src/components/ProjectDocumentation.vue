@@ -1,8 +1,7 @@
 <template>
   <div id="documentation" class="project_documentation">
     <h2 class="project_documentation--heading">Dokumentation</h2>
-    <FullSizeImage image-source="documentation.jpg"
-      alt-text="Bild von einem Kind, das mit einem Stift auf einem Blatt Papier schreibt" heading-text="Präsentation" />
+    <PresentationEmbed video-source="documentation.jpg" heading-text="Präsentation" />
     <FullSizeText heading="Projektbeschreibung" textSource="documentation/project_description.md" />
     <FullSizeText heading="Literatur" textSource="documentation/literature.md" />
   </div>
@@ -11,13 +10,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import FullSizeText from '@/components/FullSizeText.vue';
-import FullSizeImage from '@/components/FullSizeImage.vue';
+import PresentationEmbed from '@/components/PresentationEmbed.vue';
 
 export default defineComponent({
   name: 'ProjectDocumentation',
   components: {
     FullSizeText,
-    FullSizeImage,
+    PresentationEmbed,
   },
 });
 </script>
