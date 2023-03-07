@@ -38,7 +38,7 @@ export default defineComponent({
   padding-bottom: 3rem;
 
   @media #{$mobile} {
-    height: 80rem;
+    height: 84rem;
   }
 }
 
