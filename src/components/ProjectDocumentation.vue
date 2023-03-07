@@ -1,7 +1,7 @@
 <template>
   <div id="documentation" class="project_documentation">
     <h2 class="project_documentation--heading">Dokumentation</h2>
-    <PresentationEmbed video-source="documentation.jpg" heading-text="Präsentation" />
+    <PresentationEmbed presentation-source="//my.visme.co/_embed/8r46mwwk-webseite-lovemathe" heading-text="Präsentation" presentation-title="Präsentation lovemathe" />
     <FullSizeText heading="Projektbeschreibung" textSource="documentation/project_description.md" />
     <FullSizeText heading="Literatur" textSource="documentation/literature.md" />
   </div>
