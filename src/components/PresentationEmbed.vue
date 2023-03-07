@@ -4,10 +4,9 @@
       {{ headingText }}
     </h3>
     <div class="presentation-container">
-      <div class="visme_d" data-title="BZ Püchau Ganztagsschulenkongreß"
-        data-url="1j6kvd93-copy-of-bz-puchau-ganztagsschulenkongress-2022-ohne-video" data-w="1120" data-full-h="false"
-        data-h="700" data-domain="my">
-      </div>
+      <iframe sandbox="allow-scripts" class="presentation--iframe" :title="presentationTitle"
+        :src="presentationSource" style="border:0"
+        webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe>
     </div>
   </div>
 </template>
@@ -18,7 +17,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'PresentationEmbed',
   props: {
-    videoSource: {
+    presentationSource: {
       required: true,
       type: String,
     },
@@ -26,12 +25,10 @@ export default defineComponent({
       required: false,
       type: String,
     },
-  },
-  mounted() {
-    const script = document.createElement('script');
-    script.src = '//my.visme.co/visme-embed.js';
-    script.async = true;
-    document.body.appendChild(script);
+    presentationTitle: {
+      required: true,
+      type: String,
+    },
   },
 });
 </script>
@@ -47,12 +44,17 @@ export default defineComponent({
   flex-direction: column;
 
   @media #{$mobile} {
-    height: 18rem;
+    height: 21rem;
   }
 }
 
 .presentation-container {
   width: 60%;
+  height: 100%;
+
+  @media #{$mobile} {
+    width: 100%;
+  }
 }
 
 .presentation_embed--heading {
@@ -65,5 +67,10 @@ export default defineComponent({
     font-size: 1.2rem;
     word-wrap: break-word;
   }
+}
+
+.presentation--iframe {
+  width: 100%;
+  height: 100%;
 }
 </style>
