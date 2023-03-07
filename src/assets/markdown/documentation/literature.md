@@ -7,6 +7,6 @@
 * Handbuch Rechenschwäche (2017)
 * Diagnostik von Rechenstörungen; C. Jacobs und F. Petermann (2005)
 * Vorhersage von Rechenschwäche in der Grundschule; K. Krajewski (2008)
-* MBK 0 - Test mathematischer Basiskompetenzen im Kindergartenalter : Manual; K. Krajewski (2018)
+* MBK 0 - Test mathematischer Basiskompetenzen im Kindergartenalter: Manual; K. Krajewski (2018)
 * Mathematik: für alle von Anfang an!; R. Kornmann (2010)
 * Arithmetische Grundlagen spielend fördern; S. Friedl, S. Reinhold, und B. Rudolph (2019)
