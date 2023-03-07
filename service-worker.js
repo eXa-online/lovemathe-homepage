@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.833c79318af9d093e6d9706d834563b5.js"
+  "/precache-manifest.6da05786f4779247793a222a49d6927d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "lovemathe"});
