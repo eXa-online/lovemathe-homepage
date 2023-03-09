@@ -6,7 +6,7 @@
     <div class="presentation-container">
       <iframe sandbox="allow-scripts" class="presentation--iframe" :title="presentationTitle"
         :src="presentationSource" style="border:0"
-        webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe>
+        webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
     </div>
   </div>
 </template>

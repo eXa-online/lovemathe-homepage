@@ -1,6 +1,6 @@
 <template>
   <div class="video_hero">
-    <iframe width="1120" height="630" :src="videoSource" frameborder="0"
+    <iframe sandbox="allow-scripts" width="1120" height="630" :src="videoSource" frameborder="0"
       allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
   </div>
