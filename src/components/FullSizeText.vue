@@ -23,7 +23,7 @@ export default defineComponent({
   },
   props: {
     heading: {
-      required: true,
+      required: false,
       type: String,
     },
     textSource: {
