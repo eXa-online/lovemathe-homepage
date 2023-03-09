@@ -15,6 +15,7 @@
     <AboutUs />
     <TestInstruction />
     <ProjectDocumentation />
+    <Footer />
 
   </div>
 </template>
@@ -28,6 +29,7 @@ import AboutUs from '@/components/AboutUs.vue';
 import TestInstruction from '@/components/TestInstruction.vue';
 import ProjectDocumentation from '@/components/ProjectDocumentation.vue';
 import CookieButton from '@/components/CookieButton.vue';
+import Footer from '@/components/Footer.vue';
 
 export default defineComponent({
   name: 'Home',
@@ -39,6 +41,7 @@ export default defineComponent({
     TestInstruction,
     ProjectDocumentation,
     CookieButton,
+    Footer,
 },
 });
 </script>
