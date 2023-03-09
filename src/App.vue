@@ -1,9 +1,9 @@
 <template>
   <div id="nav">
-    <router-link v-scroll-to="'#game'" to="#">Starten</router-link>
-    <router-link v-scroll-to="'#about'" to="#">Über</router-link>
-    <router-link v-scroll-to="'#instructions'" to="#">Anleitung</router-link>
-    <router-link v-scroll-to="'#documentation'" to="#">Dokumentation</router-link>
+    <router-link v-scroll-to="'#game'" to="/">Starten</router-link>
+    <router-link v-scroll-to="'#about'" to="/">Über</router-link>
+    <router-link v-scroll-to="'#instructions'" to="/">Anleitung</router-link>
+    <router-link v-scroll-to="'#documentation'" to="/">Dokumentation</router-link>
   </div>
   <router-view />
 </template>
