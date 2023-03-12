@@ -3,6 +3,13 @@
     <h3 class="full_size_text--heading">{{ heading }}</h3>
     <div class="full_size_text--body">
       <vue-markdown :source="text" />
+      <modal-lightbox
+        teaser-text="teaserText"
+        heading-text="heading"
+        text-source="about_us/modal_ferry_porsche_challenge.md"
+        open-button-text="Read more"
+        close-button-text="Close"
+      />
     </div>
   </div>
 </template>
@@ -10,11 +17,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import VueMarkdown from 'vue-markdown-render';
+import ModalLightbox from './ModalLightbox.vue';
 
 export default defineComponent({
   name: 'FullSizeText',
   components: {
     VueMarkdown,
+    ModalLightbox,
   },
   data() {
     return {
