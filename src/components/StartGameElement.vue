@@ -121,6 +121,7 @@ export default defineComponent({
   font-family: 'Rubik';
   font-weight: 700;
   font-size: 2em;
+  cursor: pointer;
 
   @media #{$mobile} {
     width: 20rem;

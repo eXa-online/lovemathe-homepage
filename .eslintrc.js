@@ -18,6 +18,7 @@ module.exports = {
     "indent": "off",
     "max-len": "off",
     "global-require": "off",
+    "no-restricted-globals": "off",
     "import/no-dynamic-require": "off",
     "@typescript-eslint/no-var-requires": "off",
   },

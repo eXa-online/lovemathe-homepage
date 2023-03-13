@@ -46,11 +46,11 @@ export default defineComponent({
 
 .full_size_image--image {
   width: 60%;
-  height: 35rem;
-  object-fit: cover;
+  // height: 35rem;
+  // object-fit: cover;
 
   @media #{$mobile} {
-    height: 8rem;
+    // height: 8rem;
   }
 }
 
