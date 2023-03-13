@@ -4,7 +4,7 @@
     <TwoRowsWithImage heading="Die Idee" textSource="about_us/idea.md" image-source="kid_writing.jpg"
       flex-direction="row-reverse" />
     <TwoRowsWithImage heading="Ferry Porsche Challenge" textSource="about_us/ferry_porsche_challenge.md"
-      image-source="porsche.jpg" flex-direction="row" />
+      image-source="porsche.png" flex-direction="row" />
     <FullSizeText heading="Relevanz" textSource="about_us/relevance.md"/>
   </div>
 </template>
