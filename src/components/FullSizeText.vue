@@ -5,10 +5,8 @@
       <vue-markdown :source="text" />
       <modal-lightbox
         teaser-text="teaserText"
-        heading-text="heading"
-        text-source="about_us/modal_ferry_porsche_challenge.md"
-        open-button-text="Read more"
-        close-button-text="Close"
+        :heading-text="heading"
+        :text-source="textSource"
       />
     </div>
   </div>
