@@ -86,15 +86,6 @@ export default defineComponent({
   }
 }
 
-.two-rows--image {
-  max-width: 100%;
-
-  @media #{$mobile} {
-    max-width: 80%;
-    padding-top: 1rem;
-  }
-}
-
 .two-rows--text {
   display: flex;
   flex-direction: column;
