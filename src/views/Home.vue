@@ -2,8 +2,6 @@
   <div class="home">
     <CookieButton />
     <PageHeader
-      ctaText="Zum Testspiel"
-      cta-link="#game"
       image-source="header_background.jpg"
       headingText="LOVEMATHE"
       teaserSource="header/header_teaser.md"

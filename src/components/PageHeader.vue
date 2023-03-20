@@ -9,13 +9,6 @@
           {{ headingText }}
         </h1>
       </div>
-      <div class="header--cta">
-        <a :href="ctaLink">
-          <button v-scroll-to="ctaLink" class="header--cta__button">
-            {{ ctaText }}
-          </button>
-        </a>
-      </div>
       <div class="header--text">
         <vue-markdown :source="teaser" />
       </div>
@@ -39,16 +32,6 @@ export default defineComponent({
     };
   },
   props: {
-    ctaText: {
-      required: true,
-      type: String,
-      default: 'Button Text',
-    },
-    ctaLink: {
-      required: true,
-      type: String,
-      default: '#',
-    },
     imageSource: {
       required: true,
       type: String,
@@ -105,38 +88,17 @@ export default defineComponent({
   }
 }
 
-.header--cta__button {
-  background-color: #844ea5;
-  border: none;
-  border-radius: 50px;
-  color: white;
-  height: 4rem;
-  width: 50%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: "Rubik";
-  font-weight: 700;
-  font-size: 1.2em;
-  cursor: pointer;
-
-  @media #{$mobile} {
-    width: 80%;
-    height: 3rem;
-  }
-}
-
 .header--text {
   font-family: "Rubik";
-  font-weight: "500";
+  font-weight: "600";
   width: 50%;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: #0d5b67;
-  padding-top: 5%;
+  padding-top: 10%;
 
   @media #{$mobile} {
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 80%;
   }
 }
