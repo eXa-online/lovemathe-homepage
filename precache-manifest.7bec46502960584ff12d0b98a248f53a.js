@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "673e8855f8e4a3c62368",
-    "url": "/css/app.5af88cc1.css"
+    "revision": "45cd21337af1d4a20daa",
+    "url": "/css/app.d933f113.css"
   },
   {
     "revision": "8511ee7eea74e7ef023d64e303808dd2",
@@ -16,6 +16,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fonts/Rubik-Regular.444c8595.woff"
   },
   {
+    "revision": "76fec95ddb53b3b3c4920e3bb76df6d4",
+    "url": "/img/badge-close-dark.76fec95d.svg"
+  },
+  {
     "revision": "e107b6129ccfee6850d0a98c5d6bf208",
     "url": "/img/badge-close.e107b612.svg"
   },
@@ -28,8 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/documentation.b5c40426.jpg"
   },
   {
-    "revision": "73226ffd1c7a91ce7f2bdd0bf7fd5c28",
-    "url": "/img/foerdern_muschel.73226ffd.svg"
+    "revision": "1b1299678584b293a5911c98b4c824c5",
+    "url": "/img/foerdern_muschel.1b129967.svg"
+  },
+  {
+    "revision": "21aada0be0977b6f7e6c59e5ad0d721b",
+    "url": "/img/footer_logo.21aada0b.png"
+  },
+  {
+    "revision": "ecff06d7724d07a1b6000ba74a8fe68b",
+    "url": "/img/footer_logo_mobile.ecff06d7.png"
   },
   {
     "revision": "1278ee650ff4eb950c7f70a954eff844",
@@ -40,28 +52,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/kid_writing.ecaa9b4d.jpg"
   },
   {
-    "revision": "ae6f7b04efe7db60c37794def8a65687",
-    "url": "/img/porsche.ae6f7b04.jpg"
+    "revision": "82d7e5f3783d3458b22e25a7b122dbbb",
+    "url": "/img/porsche.82d7e5f3.png"
   },
   {
-    "revision": "d34d63a16279bfc1858523d889ea7ba7",
-    "url": "/img/test_instruction.d34d63a1.jpg"
+    "revision": "84562f9256971d00243a63c2dc350ecb",
+    "url": "/img/test_instruction.84562f92.jpg"
   },
   {
     "revision": "7af234ab3466d3d97c3a96ce9db69ff7",
     "url": "/img/testen_sonne.7af234ab.svg"
   },
   {
-    "revision": "3a0142e40991d4d39a7b422d99fe440b",
+    "revision": "6a66ce7f350e3c64e757d22fdac0be26",
     "url": "/index.html"
   },
   {
-    "revision": "673e8855f8e4a3c62368",
-    "url": "/js/app.71b8339b.js"
+    "revision": "45cd21337af1d4a20daa",
+    "url": "/js/app.417e4963.js"
   },
   {
-    "revision": "ea5f0a4a5e41f5ead363",
-    "url": "/js/chunk-vendors.582806e7.js"
+    "revision": "216e94507d4f082fc039",
+    "url": "/js/chunk-vendors.92290f58.js"
   },
   {
     "revision": "cfa184234af632040f5959b9c74af26e",
