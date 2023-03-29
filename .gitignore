@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+# build outputs
+.nuxt
+.output
 
 # local env files
 .env.local

@@ -3,34 +3,37 @@
     <h3 v-if="headingText" class="full_size_image--heading">
       {{ headingText }}
     </h3>
-    <img class="full_size_image--image" :src="image" :alt="altText" />
+    <img class="full_size_image--image" :src="imageAssetUrl" :alt="altText" />
 </div>
 </template>
+
+
+<script setup lang="ts">
+const { $requireImg } = useNuxtApp()
+
+const props = defineProps({
+  imageSource: {
+    required: true,
+    type: String,
+  },
+  altText: {
+    required: true,
+    type: String,
+  },
+  headingText: {
+    required: false,
+    type: String,
+  },
+})
+
+const imageAssetUrl = $requireImg(props.imageSource)
+</script>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'FullSizeText',
-  data() {
-    return {
-      image: require(`../assets/img/${this.imageSource}`),
-    };
-  },
-  props: {
-    imageSource: {
-      required: true,
-      type: String,
-    },
-    altText: {
-      required: true,
-      type: String,
-    },
-    headingText: {
-      required: false,
-      type: String,
-    },
-  },
 });
 </script>
 

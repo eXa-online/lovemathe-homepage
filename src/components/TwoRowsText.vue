@@ -3,57 +3,51 @@
     <h3 class="two-rows--heading">{{ heading }}</h3>
     <div class="row two-rows--text">
       <div class="two-rows--text__body">
-        <vue-markdown :source="text1" />
+        <vue-markdown :source="markdownLeft" />
       </div>
     </div>
     <div class="row two-rows--text">
       <div class="two-rows--text__body">
-        <vue-markdown :source="text2" />
+        <vue-markdown :source="markdownRight" />
       </div>
     </div>
   </div>
 </template>
 
+<script setup lang="ts">
+import VueMarkdown from 'vue-markdown-render';
+const { $requireMarkdown } = useNuxtApp()
+
+const props = defineProps({
+  heading: {
+    required: false,
+    type: String,
+  },
+  textSourceLeft: {
+    required: true,
+    type: String,
+  },
+  textSourceRight: {
+    required: true,
+    type: String,
+  },
+  flexDirection: {
+    required: true,
+    type: String,
+  },
+})
+
+const cssProps = { '--flex-direction': props.flexDirection }
+
+const markdownLeft = $requireMarkdown(props.textSourceLeft)
+const markdownRight = $requireMarkdown(props.textSourceRight)
+</script>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
-import VueMarkdown from 'vue-markdown-render';
 
 export default defineComponent({
   name: 'TwoRowsWithImage',
-  components: {
-    VueMarkdown,
-  },
-  data() {
-    return {
-      text1: require(`../assets/markdown/${this.textSourceLeft}`).default,
-      text2: require(`../assets/markdown/${this.textSourceRight}`).default,
-    };
-  },
-  props: {
-    heading: {
-      required: false,
-      type: String,
-    },
-    textSourceLeft: {
-      required: true,
-      type: String,
-    },
-    textSourceRight: {
-      required: true,
-      type: String,
-    },
-    flexDirection: {
-      required: true,
-      type: String,
-    },
-  },
-  computed: {
-    cssProps() {
-      return {
-        '--flex-direction': this.flexDirection,
-      };
-    },
-  },
 });
 </script>
 

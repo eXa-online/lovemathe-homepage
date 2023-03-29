@@ -21,5 +21,6 @@ module.exports = {
     "no-restricted-globals": "off",
     "import/no-dynamic-require": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "dynamic-import-vars": "off",
   },
 };

@@ -3,55 +3,53 @@
     <div class="row two-rows--text">
       <h3 class="two-rows--text__heading">{{ heading }}</h3>
       <div class="two-rows--text__body">
-        <vue-markdown :source="text" />
+        <vue-markdown :source="markdown" />
       </div>
     </div>
     <div class="row two-rows--image">
-      <img class="two-rows--image__element" :src="image" />
+      <img class="two-rows--image__element" :src="imageAssetUrl" :alt="imageAlt" />
     </div>
   </div>
 </template>
 
+<script setup lang="ts">
+import VueMarkdown from 'vue-markdown-render';
+const { $requireImg, $requireMarkdown } = useNuxtApp()
+
+const props = defineProps({
+  heading: {
+    required: false,
+    type: String,
+  },
+  textSource: {
+    required: true,
+    type: String,
+  },
+  imageSource: {
+    required: true,
+    type: String,
+  },
+  imageAlt: {
+    required: true,
+    type: String,
+  },
+  flexDirection: {
+    required: true,
+    type: String,
+  },
+})
+
+const cssProps = { '--flex-direction': props.flexDirection }
+
+const markdown = $requireMarkdown(props.textSource)
+const imageAssetUrl = $requireImg(props.imageSource)
+</script>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
-import VueMarkdown from 'vue-markdown-render';
 
 export default defineComponent({
   name: 'TwoRowsWithImage',
-  components: {
-    VueMarkdown,
-  },
-  data() {
-    return {
-      text: require(`../assets/markdown/${this.textSource}`).default,
-      image: require(`../assets/img/${this.imageSource}`),
-    };
-  },
-  props: {
-    heading: {
-      required: false,
-      type: String,
-    },
-    textSource: {
-      required: true,
-      type: String,
-    },
-    imageSource: {
-      required: true,
-      type: String,
-    },
-    flexDirection: {
-      required: true,
-      type: String,
-    },
-  },
-  computed: {
-    cssProps() {
-      return {
-        '--flex-direction': this.flexDirection,
-      };
-    },
-  },
 });
 </script>
 

@@ -24,9 +24,9 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci --no-audit
-          npm run build
+          npm run generate
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder the action should deploy.
+          folder: ./.output/public # The folder the action should deploy.

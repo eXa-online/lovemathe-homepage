@@ -5,44 +5,41 @@
       <div class="lightbox-content--box">
         <div class="lightbox-button--close" @click="hideLightbox"></div>
         <h3>{{ headingText }}</h3>
-        <vue-markdown :source="text" />
+        <vue-markdown :source="markdown" />
       </div>
     </div>
   </div>
 </template>
 
+<script setup lang="ts">
+import VueMarkdown from 'vue-markdown-render';
+const { $requireImg, $requireMarkdown } = useNuxtApp()
+
+const props = defineProps({
+  headingText: {
+    required: true,
+    type: String,
+  },
+  textSource: {
+    required: true,
+    type: String,
+  },
+  teaserText: {
+    required: true,
+    type: String,
+  },
+})
+
+const markdown = $requireMarkdown(props.textSource)
+</script>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
-import VueMarkdown from 'vue-markdown-render';
 
 export default defineComponent({
   name: 'ModalLightbox',
-  components: {
-    VueMarkdown,
-  },
   data() {
-    return {
-      lightboxVisible: false,
-    };
-  },
-  props: {
-    headingText: {
-      required: true,
-      type: String,
-    },
-    textSource: {
-      required: true,
-      type: String,
-    },
-    teaserText: {
-      required: true,
-      type: String,
-    },
-  },
-  computed: {
-    text() {
-      return require(`../assets/markdown/${this.textSource}`).default;
-    },
+    return { lightboxVisible: false }
   },
   methods: {
     showLightbox() {
@@ -59,7 +56,6 @@ export default defineComponent({
         this.lightboxVisible && !lightboxContent.contains(event.target) && !event.target.classList.contains('lightbox-button--open')
       ) {
         this.hideLightbox();
-        console.log('Hier');
       }
     },
   },
@@ -147,7 +143,7 @@ export default defineComponent({
   margin-left: auto;
   width: 2rem;
   height: 2rem;
-  background: url("../assets/img/badge-close-dark.svg") center / 100% no-repeat;
+  background: url("~/assets/img/badge-close-dark.svg") center / 100% no-repeat;
   cursor: pointer;
 
   @media #{$mobile} {

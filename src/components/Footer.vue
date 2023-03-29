@@ -3,11 +3,16 @@
     <div class="homepage-footer">
       <a href="https://exa-online.de">
         <div class="homepage-footer--company-logo">
-          <img class="homepage-footer--company-logo--image" :src="logo" :alt="companyName">
+          <img class="homepage-footer--company-logo--image mobile"
+            src="~/assets/img/footer_logo_mobile.png"
+            alt="eXa-online GmbH"
+          >
+          <img class="homepage-footer--company-logo--image desktop" src="~/assets/img/footer_logo.png" alt="eXa-online GmbH">
         </div>
       </a>
       <nav class="homepage-footer--nav">
         <ul>
+          <li><a href="/">Home</a></li>
           <li><a href="/impressum">Impressum</a></li>
         </ul>
       </nav>
@@ -20,25 +25,6 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Footer',
-  data() {
-    return {
-      companyName: 'eXa-online GmbH',
-    };
-  },
-  methods: {
-    imageSource(): string {
-      if (screen.orientation.type === 'portrait-primary') {
-        return 'footer_logo_mobile.png';
-      }
-      return 'footer_logo.png';
-    },
-  },
-  computed: {
-    logo(): string {
-      const path = this.imageSource();
-      return require(`../assets/img/${path}`);
-    },
-  },
 });
 </script>
 
@@ -69,6 +55,19 @@ footer {
 }
 
 .homepage-footer--company-logo--image {
+  &.desktop {
+    display: inherit;
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+  &.mobile {
+    display: none;
+    @media #{$mobile} {
+      display: inherit;
+    }
+  }
+
   height: 100%;
 }
 

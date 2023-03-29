@@ -1,0 +1,16 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  srcDir: 'src/',
+  css: ['@/assets/css/mediaQueries.scss'],
+  styleResources: {
+    scss: ['@/assets/css/mediaQueries.scss'],
+  },
+  webpack: {
+    extractCSS: true,
+  }
+//   modules: [
+//     ['vue-scrollto/nuxt', { duration: 300,
+//       easing: 'ease-in-out',
+//       force: true, }],
+//   ],
+})
