@@ -1,14 +1,27 @@
 <template>
   <div id="nav">
-    <router-link v-scroll-to="'#game'" to="/">Starten</router-link>
-    <router-link v-scroll-to="'#about'" to="/">Über</router-link>
-    <router-link v-scroll-to="'#instructions'" to="/">Anleitung</router-link>
-    <router-link v-scroll-to="'#documentation'" to="/">Dokumentation</router-link>
+    <router-link to="/#test">Starten</router-link>
+    <router-link to="/#about">Über</router-link>
+    <router-link to="/#guide">Anleitung</router-link>
+    <router-link to="/#documentation">Dokumentation</router-link>
   </div>
   <router-view />
 </template>
 
 <style lang="scss">
+
+/**
+ * Smooth scrolling on the whole document
+ */
+html {
+	scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,24 +33,31 @@ body {
   text-align: center;
   color: #2c3e50;
 }
+#__nuxt {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  color: #2c3e50;
+}
 
 @font-face {
   font-family: 'Rubik';
-  src: url(./assets/fonts/Rubik-Regular.woff) format('woff');
+  src: url(~/assets/fonts/Rubik-Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url(./assets/fonts/Rubik-Bold.woff) format('woff');
+  src: url(~/assets/fonts/Rubik-Bold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Kiwi-Days';
-  src: url(./assets/fonts/Kiwi-Days.woff2) format('woff2');
+  src: url(~/assets/fonts/Kiwi-Days.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
 }

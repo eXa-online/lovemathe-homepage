@@ -8,11 +8,12 @@
     />
     <VideoEmbed
       videoSource="https://player.vimeo.com/video/796631211?h=fcf59ebfa8&color=ff9933&byline=0&portrait=0&dnt=true"
+      video-title="Interview"
     />
-    <PlayTheGame />
-    <AboutUs />
-    <TestInstruction />
-    <ProjectDocumentation />
+    <PlayTheGame id="test"/>
+    <AboutUs id="about"/>
+    <TestInstruction id="guide"/>
+    <ProjectDocumentation id="documentation"/>
     <Footer />
 
   </div>
@@ -21,7 +22,7 @@
 <script lang="ts">
 import VideoEmbed from '@/components/VideoEmbed.vue';
 import { defineComponent } from 'vue';
-import PageHeader from '@/components/PageHeader.vue';
+import PageHeader from '~/components/PageHeader.vue';
 import PlayTheGame from '@/components/PlayTheGame.vue';
 import AboutUs from '@/components/AboutUs.vue';
 import TestInstruction from '@/components/TestInstruction.vue';

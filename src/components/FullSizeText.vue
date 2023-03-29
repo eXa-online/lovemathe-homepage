@@ -2,7 +2,7 @@
   <div class="full_size_text">
     <h3 class="full_size_text--heading">{{ heading }}</h3>
     <div class="full_size_text--body">
-      <vue-markdown :source="text" />
+      <vue-markdown :source="markdown" />
       <modal-lightbox
         teaser-text="teaserText"
         :heading-text="heading"
@@ -12,32 +12,30 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts"> 
 import VueMarkdown from 'vue-markdown-render';
 import ModalLightbox from './ModalLightbox.vue';
+const { $requireMarkdown } = useNuxtApp()
+
+const props = defineProps({
+  heading: {
+    required: false,
+    type: String,
+  },
+  textSource: {
+    required: true,
+    type: String,
+  },
+})
+
+const markdown = $requireMarkdown(props.textSource)
+</script>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'FullSizeText',
-  components: {
-    VueMarkdown,
-    ModalLightbox,
-  },
-  data() {
-    return {
-      text: require(`../assets/markdown/${this.textSource}`).default,
-    };
-  },
-  props: {
-    heading: {
-      required: false,
-      type: String,
-    },
-    textSource: {
-      required: true,
-      type: String,
-    },
-  },
 });
 </script>
 

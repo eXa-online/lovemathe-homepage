@@ -1,0 +1,1 @@
+docker run --rm --name lovemathe -p 8080:80 -v $PWD/.output/public:/usr/share/nginx/html:ro nginx:alpine

@@ -1,6 +1,6 @@
 <template>
   <div class="video_hero">
-    <iframe sandbox="allow-scripts" width="1120" height="630" :src="videoSource" frameborder="0"
+    <iframe sandbox="allow-scripts" width="1120" height="630" :src="videoSource" frameborder="0" :title="videoTitle"
       allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
   </div>
@@ -13,6 +13,10 @@ export default defineComponent({
   name: 'VideoEmbed',
   props: {
     videoSource: {
+      required: true,
+      type: String,
+    },
+    videoTitle: {
       required: true,
       type: String,
     },

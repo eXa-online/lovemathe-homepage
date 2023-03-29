@@ -45,7 +45,7 @@ export default defineComponent({
   cursor: pointer;
   width: 6rem;
   height: 6rem;
-  background: url("../assets/img/badge.svg") center / 100% no-repeat;
+  background: url("~/assets/img/badge.svg") center / 100% no-repeat;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
   border-radius: 3rem;
   z-index: 3;
@@ -237,7 +237,7 @@ export default defineComponent({
 }
 
 .close__button {
-  background: url("../assets/img/badge-close.svg") center / 100% no-repeat;
+  background: url("~/assets/img/badge-close.svg") center / 100% no-repeat;
 
   @media #{$mobile} {
     display: flex;

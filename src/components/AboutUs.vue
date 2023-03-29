@@ -1,9 +1,9 @@
 <template>
   <div id="about" class="about_us">
     <h2 class="about_us--heading">Über das Projekt</h2>
-    <TwoRowsWithImage heading="Die Idee" textSource="about_us/idea.md" image-source="kid_writing.jpg"
+    <TwoRowsWithImage heading="Die Idee" textSource="about_us/idea.md" image-source="kid_writing.jpg" image-alt="writing kid"
       flex-direction="row-reverse" />
-    <TwoRowsWithImage heading="Ferry Porsche Challenge" textSource="about_us/ferry_porsche_challenge.md"
+    <TwoRowsWithImage heading="Ferry Porsche Challenge" textSource="about_us/ferry_porsche_challenge.md" image-alt="ferry porsche challenge"
       image-source="porsche.png" flex-direction="row" />
     <FullSizeText heading="Relevanz" textSource="about_us/relevance.md"/>
   </div>

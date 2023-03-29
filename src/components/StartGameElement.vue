@@ -4,7 +4,7 @@
       {{ headingText }}
     </h3>
     <div class="play_game--image">
-      <img :src="image">
+      <img :src="imageAssetUrl" :alt="`${headingText} logo`">
     </div>
     <div class="play_game--text">
       <vue-markdown :source="teaserText" />
@@ -22,46 +22,46 @@
   </div>
 </template>
 
+
+<script setup lang="ts">
+import VueMarkdown from 'vue-markdown-render';
+const { $requireImg } = useNuxtApp()
+
+const props = defineProps({
+  headingText: {
+    required: true,
+    type: String,
+  },
+  imageSource: {
+    required: true,
+    type: String,
+  },
+  teaserText: {
+    required: true,
+    type: String,
+  },
+  buttonText: {
+    required: true,
+    type: String,
+  },
+  buttonLink: {
+    required: true,
+    type: String,
+  },
+  buttonEnabled: {
+    required: true,
+    type: Boolean,
+  },
+})
+
+const imageAssetUrl = $requireImg(props.imageSource)
+</script>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
-import VueMarkdown from 'vue-markdown-render';
 
 export default defineComponent({
-  name: 'PlayTheGame',
-  components: {
-    VueMarkdown,
-  },
-  data() {
-    return {
-      image: require(`../assets/img/${this.imageSource}`),
-    };
-  },
-  props: {
-    headingText: {
-      required: true,
-      type: String,
-    },
-    imageSource: {
-      required: true,
-      type: String,
-    },
-    teaserText: {
-      required: true,
-      type: String,
-    },
-    buttonText: {
-      required: true,
-      type: String,
-    },
-    buttonLink: {
-      required: true,
-      type: String,
-    },
-    buttonEnabled: {
-      required: true,
-      type: Boolean,
-    },
-  },
+  name: 'StartGameElement',
 });
 </script>
 
