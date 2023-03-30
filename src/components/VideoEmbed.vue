@@ -1,8 +1,16 @@
 <template>
   <div class="video_hero">
-    <iframe sandbox="allow-scripts" width="1120" height="630" :src="videoSource" frameborder="0" :title="videoTitle"
-      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
-    </iframe>
+    <iframe 
+      sandbox="allow-scripts"
+      loading="lazy"
+      width="1120"
+      height="630"
+      :src="videoSource"
+      frameborder="0"
+      :title="videoTitle"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+    />
   </div>
 </template>
 
