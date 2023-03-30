@@ -3,7 +3,7 @@
     <h2 class="test_instruction--heading">Anleitung</h2>
     <FullSizeText heading="Testanleitung" textSource="instruction/test_instruction.md" />
     <FullSizeText heading="Auswertung" textSource="instruction/evaluation.md" />
-    <FullSizeImage image-source="test_instruction.jpg" alt-text="Testanleitung" />
+    <FullSizeImage image-source="test_instruction.webp" alt-text="Testanleitung" />
   </div>
 </template>
 

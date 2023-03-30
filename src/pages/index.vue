@@ -2,7 +2,7 @@
   <div class="home">
     <CookieButton />
     <PageHeader
-      image-source="header_background.jpg"
+      image-source="header_background.webp"
       headingText="LOVEMATHE"
       teaserSource="header/header_teaser.md"
     />

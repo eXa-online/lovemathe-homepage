@@ -3,11 +3,11 @@
     <div class="homepage-footer">
       <a href="https://exa-online.de">
         <div class="homepage-footer--company-logo">
-          <img class="homepage-footer--company-logo--image mobile"
-            src="~/assets/img/footer_logo_mobile.png"
+          <img loading="lazy" class="homepage-footer--company-logo--image mobile"
+            src="~/assets/img/footer_logo_mobile.webp"
             alt="eXa-online GmbH"
-          >
-          <img class="homepage-footer--company-logo--image desktop" src="~/assets/img/footer_logo.png" alt="eXa-online GmbH">
+          />
+          <img loading="lazy" class="homepage-footer--company-logo--image desktop" src="~/assets/img/footer_logo.webp" alt="eXa-online GmbH"/>
         </div>
       </a>
       <nav class="homepage-footer--nav">

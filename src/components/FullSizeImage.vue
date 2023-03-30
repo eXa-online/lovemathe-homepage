@@ -3,7 +3,7 @@
     <h3 v-if="headingText" class="full_size_image--heading">
       {{ headingText }}
     </h3>
-    <img class="full_size_image--image" :src="imageAssetUrl" :alt="altText" />
+    <img loading="lazy" class="full_size_image--image" :src="imageAssetUrl" :alt="altText" />
 </div>
 </template>
 
