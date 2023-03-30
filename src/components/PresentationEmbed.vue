@@ -4,9 +4,16 @@
       {{ headingText }}
     </h3>
     <div class="presentation-container">
-      <iframe sandbox="allow-scripts" class="presentation--iframe" :title="presentationTitle"
-        :src="presentationSource" style="border:0"
-        webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+      <iframe
+        sandbox="allow-scripts"
+        loading="lazy"
+        class="presentation--iframe"
+        :title="presentationTitle"
+        :src="presentationSource"
+        style="border:0"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+      />
     </div>
   </div>
 </template>
