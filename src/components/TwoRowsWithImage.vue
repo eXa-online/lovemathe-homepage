@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="row two-rows--image">
-      <img class="two-rows--image__element" :src="imageAssetUrl" :alt="imageAlt" />
+      <img loading="lazy" class="two-rows--image__element" :src="imageAssetUrl" :alt="imageAlt" />
     </div>
   </div>
 </template>

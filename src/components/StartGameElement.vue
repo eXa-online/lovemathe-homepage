@@ -4,7 +4,7 @@
       {{ headingText }}
     </h3>
     <div class="play_game--image">
-      <img :src="imageAssetUrl" :alt="`${headingText} logo`">
+      <img loading="lazy" :src="imageAssetUrl" :alt="`${headingText} logo`"/>
     </div>
     <div class="play_game--text">
       <vue-markdown :source="teaserText" />
