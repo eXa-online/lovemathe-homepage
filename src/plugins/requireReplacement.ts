@@ -11,6 +11,12 @@ export default defineNuxtPlugin(() => {
     as: "url",
   })
 
+  const videos = import.meta.glob('~/assets/videos/**/*', {
+    import: 'default',
+    eager: true,
+    as: "url",
+  })
+
   return {
     provide: {
       requireMarkdown: (path: string) => {
@@ -18,6 +24,12 @@ export default defineNuxtPlugin(() => {
       },
       requireImg: (path: string) => {
         return images[`/assets/img/${path}`]
+      },
+      requireVideo: (path: string) => {
+        return { 
+          desktop: videos[`/assets/videos/${path}/big.mp4`],
+          mobile: videos[`/assets/videos/${path}/small.mp4`],
+        }
       },
     }
   }

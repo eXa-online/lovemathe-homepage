@@ -6,9 +6,9 @@
       headingText="LOVEMATHE"
       teaserSource="header/header_teaser.md"
     />
-    <VideoEmbed
-      videoSource="https://player.vimeo.com/video/796631211?h=fcf59ebfa8&color=ff9933&byline=0&portrait=0&dnt=true"
-      video-title="Interview"
+    <LocalVideoEmbed
+      video-source="fpc_lm_interview"
+      video-poster="poster2.webp"
     />
     <PlayTheGame id="test"/>
     <AboutUs id="about"/>
@@ -21,6 +21,7 @@
 
 <script lang="ts">
 import VideoEmbed from '@/components/VideoEmbed.vue';
+import LocalVideoEmbed from '@/components/LocalVideoEmbed.vue';
 import { defineComponent } from 'vue';
 import PageHeader from '~/components/PageHeader.vue';
 import PlayTheGame from '@/components/PlayTheGame.vue';
@@ -35,6 +36,7 @@ export default defineComponent({
   components: {
     PageHeader,
     VideoEmbed,
+    LocalVideoEmbed,
     PlayTheGame,
     AboutUs,
     TestInstruction,
