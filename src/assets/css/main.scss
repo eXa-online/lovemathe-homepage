@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url(~/assets/fonts/Rubik-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(~/assets/fonts/Rubik-Bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  color: $base-text-color;
+}
+
+h1 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--main-heading-textsize);
+  line-height: 118.75%;
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--section-heading-textsize);
+  line-height: 118.75%;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+
+  &.smaller {
+    font-size: var(--section-heading-textsize-small);
+    line-height: 117.857%;
+  }
+}
+
+li {
+  list-style-type: disc;
+}
+
+h3 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120.28%;
+
+  /* or 67px */
+  text-transform: uppercase;
+}
+
+.hero-sub-heading>p {
+  font-size: var(--hero-sub-headline-textsize);
+  text-align: start;
+
+  max-width: 900px;
+}
+
+p, .lightbox-content, li {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  color: $base-text-color;
+}
+  
+li {
+  text-align: left !important;
+}
+
+.number-thick {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 160%;
+  margin: 0;
+
+  color: #0D1563;
+}
+
+.thin-description {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+
+  color: #0D1563;
+}

@@ -1,3 +1,4 @@
+// TODO: replace legacy brakepoints still used (e.g. Cookie Button) 
 $mobile: "(max-width: 767px)";
 $min-tablet: "(min-width: 768px) and (orientation: landscape)";
 $tablet: "(min-width: 768px) and (max-width: 1023px) and (orientation: landscape)";
@@ -5,3 +6,31 @@ $max-tablet: "(max-width: 1023px)";
 $desktop: "(min-width: 1024px) and (orientation: landscape)";
 $large-desktop: "(min-width: 1600px)";
 $tablet-portrait: "(min-width: 768px) and (orientation: portrait)";
+
+
+
+// devices too small to render sizes as relative to screen width
+$tiny: "(max-width: 360px)";
+
+// devices too small with need to render nearly all items as columns
+$mob: "(min-width: 361px) and (max-width: 720px)";
+
+// devices where fonts and spacings should scale with width
+$tab: "(min-width: 721px) and (max-width: 1200px)";
+
+// devices where fonts and spacings should scale with width
+$desk: "(min-width: 1201px) and (max-width: 1920px)";
+
+// devices so big static maximal sizes have to be set
+$big: "(min-width: 1921px)";
+
+$isPortrait: "(orientation: portrait)";
+
+.switching-flex-direction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media #{$tab}, #{$desk}, #{$big} {
+    flex-direction: row;
+  }
+}
