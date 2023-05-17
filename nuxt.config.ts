@@ -4,8 +4,17 @@ import path from "path";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'src/',
-  vite: false, // required for require
+  css: [
+    "@/assets/css/main.scss",
+    "@/assets/css/sizes.scss",
+  ],
   app: {
+    components: {
+      "dirs": [
+        "~/components",
+        { path: '~/components/atoms', extensions: ['vue'] },
+      ]
+    },
     buildAssetsDir: "/dist/",
     head: {
       title: "lovemathe",
@@ -45,7 +54,11 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/css/_mediaQueries.scss" as *;'
+          additionalData: [
+            '@use "@/assets/css/_mediaQueries.scss" as *;',
+            '@use "@/assets/css/_z-indexes.scss" as *;',
+            '@use "@/assets/css/_colors.scss" as *;',
+          ].join("")
         }
       }
     },

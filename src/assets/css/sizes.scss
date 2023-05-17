@@ -1,0 +1,122 @@
+:root {
+  --header-height: 165px;
+  --footer-height: 400px;
+
+  --page-padding-side: 180px;
+  --section-margin: 172px;
+  --main-heading-textsize: 152px;
+  --section-heading-textsize: 96px;
+  --section-heading-textsize-small: 56px;
+  --sub-heading-textsize: 56px;
+  --sub-heading-textsize-small: 36px;
+  --button-text-size: 24px;
+  --hero-sub-headline-textsize: 32px;
+  --padding: 90px;
+  --statistic-number-textsize: 56px;
+  --statistic-description-textsize: 20px;
+
+  --cookie-button-size: 6rem;
+
+  --mauli-height: 172px;
+
+  @media #{$desk} {
+    --footer-height: 20.833vw;
+    --page-padding-side: 9.375vw;
+    --section-margin: 8.958vw;
+    --main-heading-textsize: 7.917vw;
+    --section-heading-textsize: 5vw;
+    --section-heading-textsize-small: 2.917vw;
+    --sub-heading-textsize: 2.917vw;
+    --sub-heading-textsize-small: 1.875vw;
+    --button-text-size: 1.250vw;
+    --hero-sub-headline-textsize: 1.667vw;
+    --padding: 4.688vw;
+    --statistic-number-textsize: 2.917vw;
+    --statistic-description-textsize: 1.042vw;
+
+    --cookie-button-size: 5.2vw;
+
+    --mauli-height: 8.958vw;
+  }
+
+  @media #{$tab} {
+    --footer-height: 618px;
+    --header-side-margin: 11.25rem;
+
+    --button-text-size: 32px;
+    --page-padding-side: 32px;
+    --hero-sub-headline-textsize: 32px;
+    --statistic-description-textsize: 32px;
+
+    --sub-heading-textsize-small: 52px;
+
+    --padding: 64px;
+    --sub-heading-textsize: 64px;
+
+    --section-heading-textsize-small: 72px;
+
+    --main-heading-textsize: 96px;
+    --section-heading-textsize: 96px;
+    --statistic-number-textsize: 96px;
+
+    --section-margin: 128px;
+
+
+    --cookie-button-size: 132px;
+
+    --mauli-height: 236px;
+  }
+
+  @media #{$mob} {
+    --header-height: 23.333vw;
+    --footer-height: 85.833vw;
+
+    --button-text-size: 4.444vw;
+    --page-padding-side: 4.444vw;
+    --hero-sub-headline-textsize: 4.444vw;
+    --statistic-description-textsize: 4.444vw;
+
+    --sub-heading-textsize-small: 7.222vw;
+
+    --padding: 8.889vw;
+    --sub-heading-textsize: 8.889vw;
+
+    --section-heading-textsize-small: 10.556vw;
+
+    --main-heading-textsize: 13.333vw;
+    --section-heading-textsize: 13.333vw;
+    --statistic-number-textsize: 13.333vw;
+    
+    --section-margin: 17.778vw;
+
+    --cookie-button-size: 18.333vw;
+
+    --mauli-height: 32.778vw;
+  }
+
+  @media #{$tiny} {
+    --footer-height: 309px;
+    --header-height: 84px;
+    --button-text-size: 16px;
+    --page-padding-side: 16px;
+    --hero-sub-headline-textsize: 16px;
+    --statistic-description-textsize: 16px;
+
+    --sub-heading-textsize-small: 26px;
+
+    --padding: 32px;
+    --sub-heading-textsize: 32px;
+
+    --section-heading-textsize-small: 38px;
+
+    --main-heading-textsize: 48px;
+    --section-heading-textsize: 48px;
+    --statistic-number-textsize: 48px;
+
+    --section-margin: 64px;
+
+    --cookie-button-size: 66px;
+
+    --mauli-height: 118px;
+  }
+}
