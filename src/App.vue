@@ -1,11 +1,7 @@
 <template>
-  <div id="nav">
-    <router-link to="/#test">Starten</router-link>
-    <router-link to="/#about">Über</router-link>
-    <router-link to="/#guide">Anleitung</router-link>
-    <router-link to="/#documentation">Dokumentation</router-link>
-  </div>
+  <Header class="max-width-restrained"/>
   <router-view />
+  <Footer />
 </template>
 
 <style lang="scss">
