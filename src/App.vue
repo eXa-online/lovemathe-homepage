@@ -10,18 +10,21 @@
  * Smooth scrolling on the whole document
  */
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
   margin: 0;
-  padding: 0 $page-padding-side;
-  background: darkgray;
-  // background: url('~/assets/img/design_guide.png');
+  padding: 0 var(--page-padding-side);
+  background-color: #{$website-background};
+  background-image: url('~/assets/img/background.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 </style>
