@@ -7,6 +7,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     '@vue/airbnb',
     '@vue/typescript/recommended',
+    '@nuxtjs/eslint-config-typescript',
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -14,13 +15,5 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'linebreak-style': 'off',
-    "indent": "off",
-    "max-len": "off",
-    "global-require": "off",
-    "no-restricted-globals": "off",
-    "import/no-dynamic-require": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "dynamic-import-vars": "off",
   },
 };
