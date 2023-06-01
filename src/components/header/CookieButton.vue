@@ -1,82 +1,78 @@
 <template>
-  <div class="overlayBtn" v-on:click="openOverlay()"></div>
-  <div :class="{ active: isActive }" class="overlay" v-on:click="closeOverlay()">
-    <p class="overlay__text">Wir respektieren<br>Ihre Privatsphäre</p>
-    <div>
-      <div class="overlay__bigText overlay__space">keine</div>
-      <div class="overlay__bigText">Cookies</div>
-      <div class="overlay__bigText overlay__space">kein</div>
-      <div class="overlay__bigText">Tracking</div>
-      <div class="overlay__bigText overlay__space">keine</div>
-      <div class="overlay__bigText">Zugriffsprotokolle</div>
+  <div class="overlay-wrap">
+    <div class="overlayBtn" @click="openOverlay()" />
+    <div :class="{ active: isActive }" class="overlay" @click="closeOverlay()">
+      <p class="overlay__text">
+        Wir respektieren<br>Ihre Privatsphäre
+      </p>
+      <div>
+        <div class="overlay__bigText overlay__space">
+          keine
+        </div>
+        <div class="overlay__bigText">
+          Cookies
+        </div>
+        <div class="overlay__bigText overlay__space">
+          kein
+        </div>
+        <div class="overlay__bigText">
+          Tracking
+        </div>
+        <div class="overlay__bigText overlay__space">
+          keine
+        </div>
+        <div class="overlay__bigText">
+          Zugriffsprotokolle
+        </div>
+      </div>
+      <div class="close">
+        <div class="close__button" />
+      </div>
     </div>
-    <div class="close">
-      <div class="close__button"></div>
-    </div>
-</div>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'overlay',
-  components: {
-  },
-  data() {
+  data () {
     return {
-      isActive: false,
-    };
+      isActive: false
+    }
   },
   methods: {
-    openOverlay() {
-      this.isActive = true;
+    openOverlay () {
+      this.isActive = true
     },
-    closeOverlay() {
-      this.isActive = false;
-    },
-  },
-});
+    closeOverlay () {
+      this.isActive = false
+    }
+  }
+})
 </script>
 
 <style lang="scss" scoped>
+.overlay-wrap{
+  position: relative;
+
+  @media #{$mobile}, #{$tablet-portrait} {
+    position: inherit;
+  }
+}
 .overlayBtn {
-  position: absolute;
   cursor: pointer;
-  width: 6rem;
-  height: 6rem;
+  width: var(--cookie-button-size);
+  height: var(--cookie-button-size);
   background: url("~/assets/img/badge.svg") center / 100% no-repeat;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 3rem;
+  border-radius: calc(var(--cookie-button-size) / 2);
   z-index: 3;
   transition: transform 0.3s;
-  transform: translate(-50%, -50%);
-
-  @media #{$mobile} {
-    top: 20%;
-    left: 25%;
-    width: 5rem;
-    height: 5rem;
-  }
-
-  @media #{$tablet-portrait} {
-    top: 15%;
-    left: 20%;
-  }
-
-  @media #{$tablet} {
-    bottom: -1rem;
-    left: 3rem;
-  }
-
-  @media #{$desktop} {
-    top: 40%;
-    left: 20%;
-  }
 }
 
 .overlayBtn:hover {
-  transform: scale(1.1) translate(-50%, -50%);
+  transform: scale(1.1);
 }
 
 .overlay {
@@ -85,71 +81,67 @@ export default defineComponent({
   background: linear-gradient(45deg, rgba(20, 90, 127, 1) 0%, #4E186F 0%, #844EA5 100%);
   z-index: -1;
   cursor: pointer;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(50% - (var(--cookie-button-size) / 2)), calc(-50% + (var(--cookie-button-size) / 2)));
 
   @media #{$mobile} {
-    position: absolute;
-    left: 50%;
-    top: 45%;
     opacity: 0;
     transform: scaleY(0.75) translateY(-5rem) translate(-50%, -50%);
     transition: all 0.4s;
-    width: 100%;
-    height: 70%;
+    width: 100vw;
+    height: 70vw;
+    right: calc(-1 * var(--page-padding-side));
     min-height: 35rem;
     padding: 0;
     transform-origin: center center;
   }
 
   @media #{$tablet-portrait} {
-    position: absolute;
-    left: 50%;
-    top: 50%;
     opacity: 0;
     transform: scaleY(0.75) translateY(-5rem) translate(-50%, -50%);
     transition: all 0.3s;
     z-index: -1;
-    width: 50%;
-    height: 50%;
+    width: 50vw;
+    height: 50vw;
+    min-height: 35rem;
     border-radius: 10%;
     transform-origin: center center;
   }
 
   @media #{$min-tablet} {
-    position: absolute;
-    left: -6rem;
     width: 16rem;
     border-radius: 16rem;
-    transform: scale(0) translate(-50%, -50%);
+    transform: translate(
+        calc(50% - (var(--cookie-button-size) / 2)),
+        calc(-50% + (var(--cookie-button-size) / 2))
+      )
+      scale(0.01); // TODO: analyze why scale(0) disables animation
     transition: transform 0.5s, left 0.5s;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-    z-index: 3;
+    z-index: var(--z-index-cookie-inactive);
   }
 
   @media #{$desktop} {
-    top: calc(40% - 8rem);
-    left: calc(20% - 8rem);
+    top: 0;
+    right: 0;
   }
 }
 
 .overlay.active {
-  z-index: 101;
+  z-index: var(--z-index-cookie-active);
   opacity: 1;
-  transform: scale(1) translateY(0) translate(-50%, -50%);
-
-  @media #{$min-tablet} {
-    left: 20%;
-  }
+  transform: scale(1) translateY(0) translate(0, 0);
 
   @media #{$tablet-portrait} {
-    left: 50%;
     top: 50%;
     z-index: 5;
   }
 }
 
 .overlay__text {
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   text-align: center;
 
@@ -161,7 +153,7 @@ export default defineComponent({
 
 .overlay__bigText {
   font-family: "Proxima Nova Extrabold", sans-serif;
-  color: #fff;
+  color: white;
   transform: scale(0);
 
   @media #{$mobile} {
