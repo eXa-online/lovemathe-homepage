@@ -1,87 +1,55 @@
 <template>
-  <footer>
-    <div class="homepage-footer">
-      <a href="https://exa-online.de">
-        <div class="homepage-footer--company-logo">
-          <img loading="lazy" class="homepage-footer--company-logo--image mobile"
-            src="~/assets/img/footer_logo_mobile.webp"
-            alt="eXa-online GmbH"
-          />
-          <img loading="lazy" class="homepage-footer--company-logo--image desktop" src="~/assets/img/footer_logo.webp" alt="eXa-online GmbH"/>
-        </div>
-      </a>
-      <nav class="homepage-footer--nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/impressum">Impressum</a></li>
-        </ul>
-      </nav>
+  <div id="footer">
+    <img src="~/assets/img/footer_logo.webp" alt="eXa-Online GmbH">
+    <div id="contact-data">
+      <p>eXa-Online GmbH</p>
+      <p>Kochstraße 138</p>
+      <p>04277 Leipzig</p>
+      <p><a href="tel:+493418781754">Tel.:+49 341 8781754</a></p>
+      <p><a href="mailto:info@exa-online.de">info[at]exa-online.de</a></p>
     </div>
-  </footer>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'Footer',
-});
+<script setup lang="ts">
+import { defineComponent } from 'vue'
 </script>
 
-<style lang="scss">
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.4rem;
-  background-color: #ADE2EA;
-  color: #0D5B67;
-  font-family: Rubik;
-}
+<script lang="ts">
+</script>
 
-.homepage-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-}
+<style lang="scss" scoped>
+#footer {
+  background: #FFFFFF;
+  box-shadow: 0px -4px 38px rgba(135, 165, 193, 0.25);
+  margin-left: calc(-1 * var(--page-padding-side));
+  width: 100vw;
+  height: var(--footer-height);
 
-.homepage-footer--company-logo {
-  height: 2rem;
+  @extend .switching-flex-direction;
+  justify-content: space-evenly;
 
-  @media #{$mobile} {
-    height: 3rem;
+  img {
+    max-width: 100%;
+    width: 40%;
+  }
+
+  p, a, strong {
+    font-size: var(--button-text-size);
+    margin: 0;
+  }
+
+  p>a {
+    font-weight: 700;
   }
 }
+  .imprint {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 
-.homepage-footer--company-logo--image {
-  &.desktop {
-    display: inherit;
     @media #{$mobile} {
-      display: none;
+      min-height: 130vh;
     }
   }
-  &.mobile {
-    display: none;
-    @media #{$mobile} {
-      display: inherit;
-    }
-  }
-
-  height: 100%;
-}
-
-.homepage-footer--nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.homepage-footer--nav li {
-  margin-right: 1rem;
-}
-
-.homepage-footer--nav a {
-  color: #0D5B67;
-  text-decoration: none;
-}
 </style>
