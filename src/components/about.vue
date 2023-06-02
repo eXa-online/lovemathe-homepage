@@ -24,9 +24,9 @@
   }
 
   h2 {
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
     @media #{$desk} {
-      margin-bottom: 4rem; 
+      margin-bottom: 4rem;
     }
   }
 }

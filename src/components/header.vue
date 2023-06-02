@@ -7,7 +7,6 @@
       </atoms-button-pill>
       <HeaderCookieButton id="cookie-button" />
     </div>
-    
   </div>
 </template>
 
