@@ -84,7 +84,10 @@ export default defineComponent({
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(calc(50% - (var(--cookie-button-size) / 2)), calc(-50% + (var(--cookie-button-size) / 2)));
+  transform: translate(
+    calc(50% - (var(--cookie-button-size) / 2)),
+    calc(-50% + (var(--cookie-button-size) / 2))
+  );
 
   @media #{$mobile} {
     opacity: 0;

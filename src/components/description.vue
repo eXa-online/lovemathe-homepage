@@ -6,8 +6,14 @@
       :source="mdText"
     />
     <div id="description-texts">
-      <description-column title="1. Projektidee" markdown="description/idea.md" />
-      <description-column title="2. Mehrwert von digitalen Tests" markdown="description/advantages.md" />
+      <description-column
+        title="1. Projektidee"
+        markdown="description/idea.md"
+      />
+      <description-column
+        title="2. Mehrwert von digitalen Tests"
+        markdown="description/advantages.md"
+      />
     </div>
   </div>
 </template>
@@ -18,7 +24,7 @@ import { useMarkdownImport } from '~/composables/use-requires'
 
 const requireMarkdown = useMarkdownImport()
 
-const mdText = requireMarkdown("description/description.md")
+const mdText = requireMarkdown('description/description.md')
 </script>
 
 <style lang="scss" scoped>
@@ -36,9 +42,9 @@ const mdText = requireMarkdown("description/description.md")
 
   h2 {
     font-size: var(--section-heading-textsize-small);
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
     @media #{$desk} {
-      margin-bottom: 4rem; 
+      margin-bottom: 4rem;
     }
   }
 }

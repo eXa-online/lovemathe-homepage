@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <div id="hamburger-button" />
-<!-- 
+    <!--
     <router-link to="/#test">
       Starten
     </router-link>
@@ -20,7 +20,6 @@
       </atoms-button-pill>
       <HeaderCookieButton id="cookie-button" />
     </div>
-    
   </div>
 </template>
 

@@ -63,9 +63,9 @@ export default defineComponent({
 
   h3 {
     font-size: var(--sub-heading-textsize-small);
-    // margin-bottom: 2rem; 
+    // margin-bottom: 2rem;
     @media #{$desk} {
-      // margin-bottom: 4rem; 
+      // margin-bottom: 4rem;
     }
   }
 }

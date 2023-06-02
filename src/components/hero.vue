@@ -60,7 +60,7 @@ const analyzedStatistics = rawStatistics.split('\n').map(readStatisticLine)
     top: calc(0.157 * var(--header-height));
     background-color: transparent;
     z-index: -1;
-    
+
     background-image: url('~/assets/img/bubbles_desk.svg');
     @media #{$big} {
       background-image: url('~/assets/img/bubbles_big.svg');
@@ -75,7 +75,7 @@ const analyzedStatistics = rawStatistics.split('\n').map(readStatisticLine)
     }
     background-size: 100%;
     background-repeat: no-repeat;
-    
+
     width: 100vw;
     height: 500%;
   }
@@ -131,7 +131,6 @@ const analyzedStatistics = rawStatistics.split('\n').map(readStatisticLine)
   align-items: center;
   padding: 0 10%;
   min-width: 0%;
-
 
   @media #{$tiny},#{$mob} {
     width: 80%;

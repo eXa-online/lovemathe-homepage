@@ -1,6 +1,6 @@
 <template>
   <atoms-content-card id="games">
-    <img src="~/assets/img/mauli.svg" alt="mauli" id="mauli" />
+    <img id="mauli" src="~/assets/img/mauli.svg" alt="mauli">
     <GamesSection title="Testen" :markdown="testGameMarkdown">
       <atoms-button-pill uppercase>
         Zum Testspiel
