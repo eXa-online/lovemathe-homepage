@@ -1,6 +1,7 @@
 - Können jederzeit und überall durchgeführt werden
 - Keine Anwesenheit von Psycholog*innen erforderlich
 
+
 - Beliebig viele Tests parallel möglich
 - De facto keine Kosten
 - Sind als Spiele realisierbar (Motivationssteigerung)
