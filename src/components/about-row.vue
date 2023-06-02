@@ -80,7 +80,6 @@ export default defineComponent({
   h3, p, .about-row__markdown {
     width: 90%;
 
-
     @media #{$desk}, #{$big} {
       width: 33%;
       text-align: start;

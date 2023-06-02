@@ -31,7 +31,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from 'vue'
 const router = useRouter()
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <Header class="max-width-restrained"/>
+  <Header class="max-width-restrained" />
   <router-view />
   <Footer />
 </template>
