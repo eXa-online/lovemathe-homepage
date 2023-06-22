@@ -14,7 +14,7 @@
         <atoms-expand-link
           class="manual-row__expand-button"
           @expand="expand"
-          @retract="retract"
+          @collapse="collapse"
         />
       </template>
     </atoms-content-card>
@@ -49,7 +49,7 @@ export default defineComponent({
     expand () {
       this.expanded = true
     },
-    retract () {
+    collapse () {
       this.expanded = false
     }
   }

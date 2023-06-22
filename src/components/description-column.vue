@@ -6,7 +6,7 @@
       :class="{ expanded }"
       :source="expanded ? mdFullText : mdAbstract"
     />
-    <atoms-expand-link @expand="expand" @retract="retract" />
+    <atoms-expand-link @expand="expand" @collapse="collapse" />
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default defineComponent({
     expand () {
       this.expanded = true
     },
-    retract () {
+    collapse () {
       this.expanded = false
     }
   }
