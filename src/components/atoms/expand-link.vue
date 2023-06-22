@@ -8,7 +8,7 @@ import { defineComponent } from 'vue'
 
 <script lang="ts">
 export default defineComponent({
-  emits: ['expand', 'retract'],
+  emits: ['expand', 'collapse'],
   data () {
     return { isActive: false }
   },
@@ -23,7 +23,7 @@ export default defineComponent({
   methods: {
     toggle () {
       if (this.isActive) {
-        this.retract()
+        this.collapse()
       } else {
         this.expand()
       }
@@ -32,9 +32,9 @@ export default defineComponent({
       this.isActive = true
       this.$emit('expand')
     },
-    retract () {
+    collapse () {
       this.isActive = false
-      this.$emit('retract')
+      this.$emit('collapse')
     }
   }
 })

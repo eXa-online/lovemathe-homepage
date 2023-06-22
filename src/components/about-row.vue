@@ -9,7 +9,7 @@
     <p v-else>
       {{ expanded ? props.plain.fullText : props.plain.abstract }}
     </p>
-    <atoms-expand-button class="about-text__expand-button" @expand="expand" @retract="retract" />
+    <atoms-expand-button class="about-text__expand-button" @expand="expand" @collapse="collapse" />
   </div>
 </template>
 
@@ -45,7 +45,7 @@ export default defineComponent({
     expand () {
       this.expanded = true
     },
-    retract () {
+    collapse () {
       this.expanded = false
     }
   }
