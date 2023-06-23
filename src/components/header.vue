@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <div id="hamburger-button" />
+    <HeaderBurgerMenu />
     <div id="header-actions">
       <atoms-button-pill @click="() => router.push({ path: '/impressum' })">
         Kontakt
