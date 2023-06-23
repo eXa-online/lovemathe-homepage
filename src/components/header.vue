@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <div id="hamburger-button" />
+    <HeaderBurgerMenu />
     <!--
     <router-link to="/#test">
       Starten
