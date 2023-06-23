@@ -3,7 +3,6 @@
     <h2>Dokumentation</h2>
     <atoms-content-card class="presentation">
       <iframe
-        sandbox="allow-scripts"
         class="presentation--iframe"
         title="Präsentation"
         src="https://my.visme.co/_embed/8r46mwwk-webseite-lovemathe"
