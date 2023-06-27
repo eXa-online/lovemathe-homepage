@@ -22,4 +22,4 @@ jobs:
       - name: Install and Lint 🔧
         run: |
           npm ci --no-audit
-          npm run lint
+          npm run lint -- --max-warnings 0
