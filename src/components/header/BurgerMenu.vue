@@ -1,8 +1,8 @@
 <template>
   <div id="hamburger">
-    <div id="hamburger-button" @click="open"></div>
-    <div :class="{ active: isActive }" id="hamburger-menu">
-      <div id="hamburger-menu__close-button" @click="close"></div>
+    <div id="hamburger-button" @click="open" />
+    <div id="hamburger-menu" :class="{ active: isActive }">
+      <div id="hamburger-menu__close-button" @click="close" />
       <AtomsNavigationLink target="/#games" text="Spiele starten" @click="close" />
       <AtomsNavigationLink target="/#about" text="Über das Projekt" @click="close" />
       <AtomsNavigationLink target="/#instruction" text="An&shy;leitung" @click="close" />
