@@ -1,8 +1,8 @@
 <template>
   <div id="hamburger">
-    <div id="hamburger-button" @click="open" />
-    <div v-show="isActive" id="hamburger-menu">
-      <div id="hamburger-menu__close-button" @click="close" />
+    <div id="hamburger-button" @click="open"></div>
+    <div :class="{ active: isActive }" id="hamburger-menu">
+      <div id="hamburger-menu__close-button" @click="close"></div>
       <AtomsNavigationLink target="/#games" text="Spiele starten" @click="close" />
       <AtomsNavigationLink target="/#about" text="Über das Projekt" @click="close" />
       <AtomsNavigationLink target="/#instruction" text="An&shy;leitung" @click="close" />
@@ -59,10 +59,13 @@ export default defineComponent({
   position: absolute;
   left: 0;
   top: var(--header-height);
+  transform: translate(-150%);
+  transition: transform 0.5s ease-in-out, visibility 0.5s ease-in;
   padding: calc(var(--padding) / 2);
   max-width: 100%;
   z-index: 3;
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -70,13 +73,13 @@ export default defineComponent({
   background: white;
   box-shadow: 0px 4px 34px rgba(135, 165, 193, 0.25);
   border-radius: 0 50px 50px;
-  padding: 4rem;
 
   @media #{$mob}, #{$tiny} {
     padding: 2rem;
   }
 
   @media #{$mobile} {
+    transform: translate(-100%);
     width: 100vw;
     top: 0;
     left: calc(-1 * var(--page-padding-side));
@@ -84,6 +87,13 @@ export default defineComponent({
     overflow-y: scroll;
   }
 }
+
+#hamburger-menu.active {
+  transform: translate(0);
+  transition: transform 0.5s ease-in;
+  visibility: visible;
+}
+
 #hamburger-menu__close-button {
   height: 64px;
   aspect-ratio: 1;
