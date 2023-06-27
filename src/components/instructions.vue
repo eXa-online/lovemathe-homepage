@@ -9,7 +9,7 @@
       button-text="Zum Cheatsheet"
     >
       <template #lightbox>
-        <img src="~/assets/img/test_instruction.webp" alt="test instructions">
+        <img style="width: 100%;" src="~/assets/img/test_instruction.webp" alt="test instructions">
       </template>
     </instructions-row>
   </div>
