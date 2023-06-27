@@ -2,14 +2,17 @@
   <div id="documentation">
     <h2>Dokumentation</h2>
     <atoms-content-card class="presentation">
-      <iframe
+      <p style="width: 100%; font-size: 10vw;text-align: center; color: lightgrey;">
+        Präsentation
+      </p>
+      <!-- <iframe
         class="presentation--iframe"
         title="Präsentation"
         src="https://my.visme.co/_embed/8r46mwwk-webseite-lovemathe"
         style="border:0"
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
-      />
+      /> -->
     </atoms-content-card>
   </div>
 </template>
@@ -32,18 +35,5 @@
       font-size: var(--section-heading-textsize-small);
     }
   }
-
-  iframe {
-    z-index: 2;
-  }
-}
-
-// .presentation {
-//   display: flex;
-//   flex-grow: 1;
-// }
-.presentation--iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
 }
 </style>
