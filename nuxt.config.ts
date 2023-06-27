@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     "@/assets/css/main.scss",
     "@/assets/css/sizes.scss",
   ],
+  plugins: [
+    {src: '~/plugins/vue-number-animation', mode: 'client'}
+  ],
   app: {
     components: {
       "dirs": [
@@ -68,7 +71,18 @@ export default defineNuxtConfig({
         '@': path.join(__dirname, 'src'),
       },
     },
-  }
+  },
+
+  // workaround for `Hydration completed but contains mismatches.`
+  hooks: {
+    'vite:extendConfig'(config, { isServer }) {
+      if (isServer) {
+        // Workaround for netlify issue
+        // https://github.com/nuxt/nuxt.js/issues/14445
+        config.build.rollupOptions.output.inlineDynamicImports = true
+      }
+    }
+  },
 
 //   modules: [
 //     ['vue-scrollto/nuxt', { duration: 300,

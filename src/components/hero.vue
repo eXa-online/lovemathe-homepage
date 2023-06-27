@@ -4,18 +4,20 @@
       <h1>LoveMathe</h1>
       <vue-markdown class="hero-sub-heading" :source="descriptionText" />
     </div>
-    <div class="hero-side">
-      <span v-for="stat in analyzedStatistics" :key="stat.description" class="statistics-row">
-        <number
-          tag="p"
-          class="number-thick"
-          :to="stat.value"
-          :duration="2"
-        />
-        <p class="number-thick"> {{ stat.unit }}</p>
-        <p class="thin-description">{{ stat.description }}</p>
-      </span>
-    </div>
+    <ClientOnly>
+      <div class="hero-side">
+        <span v-for="stat in analyzedStatistics" :key="stat.description" class="statistics-row">
+          <number
+            tag="p"
+            class="number-thick"
+            :to="stat.value"
+            :duration="2"
+          />
+          <p class="number-thick"> {{ stat.unit }}</p>
+          <p class="thin-description">{{ stat.description }}</p>
+        </span>
+      </div>
+    </ClientOnly>
   </div>
 </template>
 
