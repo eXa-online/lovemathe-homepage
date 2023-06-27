@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0 var(--page-padding-side);
   background-color: #{$website-background};
-  background-image: url('~/assets/img/background.webp');
+  background-image: url('~/assets/img/background.svg');
   background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
