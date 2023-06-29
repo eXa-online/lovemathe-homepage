@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    assetsInclude: ['**/*.md','**/*.svg','**/*.png','**/*.jpg'],
+    assetsInclude: ['**/*.md','**/*.svg','**/*.png','**/*.jpg','**/*.webp','**/*.webm','**/*.mp4'],
     css: {
       preprocessorOptions: {
         scss: {

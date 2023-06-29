@@ -25,8 +25,5 @@ export const useVideoImport = () => {
     as: 'url'
   })
 
-  return (path: string) => ({
-    desktop: videos[`/assets/videos/${path}/big.mp4`],
-    mobile: videos[`/assets/videos/${path}/small.mp4`]
-  })
+  return (path: string) => videos[`/assets/videos/${path}`]
 }
