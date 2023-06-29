@@ -3,6 +3,8 @@
     <h2>Dokumentation</h2>
     <atoms-content-card class="presentation" style="aspect-ratio: 16/9;">
       <vueper-slides
+        lazy
+        lazy-load-on-drag
         progress
         touchable
         :bullets="false"
@@ -27,9 +29,10 @@
 import { VueperSlides, VueperSlide } from 'vueperslides'
 // import 'vueperslides/dist/vueperslides.css'
 
-import { useImageImport } from '~/composables/use-requires'
+import { useImageImport, useVideoImport } from '~/composables/use-requires'
 
 const requireImage = useImageImport()
+const requireVideo = useVideoImport()
 const slides = [
   {image: requireImage('slides/1.webp')},
   {image: requireImage('slides/2.webp')},
@@ -41,7 +44,8 @@ const slides = [
   {image: requireImage('slides/8.webp')},
   {
     video: {
-      mp4: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      mp4: requireVideo('fpc_lm_interview/big.mp4'),
+      webm: requireVideo('fpc_lm_interview/big.webm'),
       // props: { autoplay: true, loop: true, controls: false }
     }
   }
