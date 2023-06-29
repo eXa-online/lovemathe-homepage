@@ -21,6 +21,7 @@
     "vue-markdown-render": "^2.0.1",
     "vue-number-animation": "^1.1.2",
     "vue-router": "^4.0.0-0",
+    "vueperslides": "^3.5.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
