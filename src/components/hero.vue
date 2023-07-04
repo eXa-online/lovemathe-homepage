@@ -7,6 +7,7 @@
     <ClientOnly>
       <div class="hero-side">
         <span v-for="stat in analyzedStatistics" :key="stat.description" class="statistics-row">
+          <p class="number-thick"> {{ stat.prefix }}</p>
           <number
             tag="p"
             class="number-thick"
@@ -31,13 +32,13 @@ const descriptionText = requireMarkdown('hero/hero_description.md')
 const rawStatistics = requireMarkdown('hero/hero_statistics.md')
 
 function readStatisticLine (line: string) {
-  const lineWithoutPrefix = line.substring(2)
-  const value = lineWithoutPrefix.match(/^\d+/)[0]
-  const unit = lineWithoutPrefix.replace(value, '').match((/^.+? /))[0].trim()
+  const matchedLine = line.match(/^\* ([^0-9]*?)(\d+)(.+?) (.+)/)
+  const prefix = matchedLine[1]
+  const value = matchedLine[2]
+  const unit = matchedLine[3]
+  const description = matchedLine[4]
 
-  const description = lineWithoutPrefix.split(' ').slice(1).join(' ')
-
-  return { value, unit, description }
+  return { prefix, value, unit, description }
 }
 
 const analyzedStatistics = rawStatistics.split('\n').map(readStatisticLine)
