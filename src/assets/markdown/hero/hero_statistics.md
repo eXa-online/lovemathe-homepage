@@ -1,3 +1,3 @@
-* 20K geholfenen Kindern
-* 3x mehr Erfolg
-* 100x Lorem Ipsum
+* 750k eingeschulte Kinder p.a.
+* >80% unnötige Tests
+* 20k geholfenen Kindern p.a.
