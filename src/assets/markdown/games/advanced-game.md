@@ -1,1 +1,1 @@
-Wenn der Test auf einem Gebiet nicht erfolgreich war, gibt es hier die Möglichkeit durch gezielte Förderspiele an einer Verbesserung zu arbeiten. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+Wenn der Test auf einem Gebiet nicht erfolgreich war, gibt es hier die Möglichkeit durch gezielte Förderspiele an einer Verbesserung zu arbeiten.
