@@ -25,5 +25,6 @@ const props = defineProps<{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  max-width: 45%;
 }
 </style>

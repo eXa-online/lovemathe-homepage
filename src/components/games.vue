@@ -29,6 +29,7 @@ $mauli-offset-mult: 0.82;
 #games {
   margin: calc(4rem + (var(--mauli-height) * $mauli-offset-mult)) 0 4rem;
   justify-content: center;
+  align-items: stretch;
   position: relative;
 
   @extend .switching-flex-direction;
