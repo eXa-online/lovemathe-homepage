@@ -1,6 +1,6 @@
 <template>
   <Header class="max-width-restrained" />
-  <router-view />
+  <NuxtPage />
   <Footer />
 </template>
 

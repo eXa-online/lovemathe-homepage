@@ -8,9 +8,23 @@ export default defineNuxtConfig({
     "@/assets/css/main.scss",
     "@/assets/css/sizes.scss",
   ],
+  modules: [
+    '@nuxt/image',
+    'nuxt-delay-hydration',
+  ],
+  delayHydration: { 
+    mode: 'manual',
+    // enables nuxt-delay-hydration in dev mode for testing  
+    debug: process.env.NODE_ENV === 'development'
+  },
   plugins: [
     {src: '~/plugins/vue-number-animation', mode: 'client'}
   ],
+  nitro: {
+    prerender: {
+      ignore: ["/false"]
+    },
+  },
   app: {
     components: {
       "dirs": [
@@ -73,13 +87,38 @@ export default defineNuxtConfig({
     },
   },
 
-  // workaround for `Hydration completed but contains mismatches.`
+  // for now just workarounds
   hooks: {
+    // workaround for `Hydration completed but contains mismatches.`
+    // caused by netlify issue
+    // https://github.com/nuxt/nuxt.js/issues/14445
     'vite:extendConfig'(config, { isServer }) {
       if (isServer) {
-        // Workaround for netlify issue
-        // https://github.com/nuxt/nuxt.js/issues/14445
         config.build.rollupOptions.output.inlineDynamicImports = true
+      }
+    },
+    // workaround for forced preload of all videos
+    // caused by the build process having the default of `prefetch: true`
+    // without option to change it
+    // reduces page size from 120M to 2M
+    'build:manifest': (manifest) => {
+      const keysToRemove = []
+
+      for (const key in manifest) {
+        const file = manifest[key]
+
+        if (file.assets) {
+          file.assets = file.assets
+            .filter(
+              (asset: string) =>
+                !asset.endsWith('.webp') &&
+                !asset.endsWith('.jpg') &&
+                !asset.endsWith('.png') &&
+                !asset.endsWith('.mp4') &&
+                !asset.endsWith('.svg') &&
+                !asset.endsWith('.webm')
+            )
+        }
       }
     }
   },
