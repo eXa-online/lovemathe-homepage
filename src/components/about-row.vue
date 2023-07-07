@@ -1,5 +1,5 @@
 <template>
-  <div class="about-row">
+  <div class="about-row" :class="expanded ? 'active' : ''">
     <h3>{{ props.title }}</h3>
     <vue-markdown
       v-if="props.markdown"
@@ -59,6 +59,8 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 15rem;
+  transition: height 0.2s ease-in;
   padding: 0 0 2rem;
 
   border-top: 2px solid #{$divider-color};
@@ -75,6 +77,10 @@ export default defineComponent({
     @media #{$desk}, #{$big} {
       text-align: start;
     }
+  }
+
+  &.active {
+    height: 30rem;
   }
 
   h3, p, .about-row__markdown {
