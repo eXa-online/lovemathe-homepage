@@ -3,8 +3,8 @@
     <h2>Dokumentation</h2>
     <atoms-content-card class="presentation">
       <vueper-slides
-        :lazy="false"
-        :lazy-load-on-drag="false"
+        :lazy="true"
+        :lazy-load-on-drag="true"
         progress
         :touchable="true"
         :bullets="false"
@@ -13,8 +13,9 @@
         class="no-shadow"
         :infinite="false"
         disable-arrows-on-edges
-        :slide-ratio="9/16"
+        :slide-ratio="9 / 16"
         arrows-outside
+        aria-label=""
       >
         <vueper-slide
           v-for="(slide, i) in slides"
@@ -47,7 +48,11 @@ const slides = [
   {
     video: {
       mp4: requireVideo('fpc_lm_interview/big.mp4'),
-      webm: requireVideo('fpc_lm_interview/big.webm')
+      webm: requireVideo('fpc_lm_interview/big.webm'),
+      props: {
+        preload: 'none',
+        controls: true
+      }
     }
   }
 ]
@@ -72,6 +77,14 @@ const slides = [
 </style>
 
 <style>
+.vueperslide__loader{
+  pointer-events: none;
+}
+.vueperslide__video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
 .vueperslides__progress {
   background: rgba(0, 0, 0, 0.25);
   top: unset;

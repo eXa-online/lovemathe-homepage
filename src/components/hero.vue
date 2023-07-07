@@ -11,6 +11,7 @@
           <number
             tag="p"
             class="number-thick"
+            :from="0"
             :to="stat.value"
             :duration="2"
           />

@@ -1,5 +1,7 @@
 <template>
-  <a class="expand-link" :class="isActive ? 'active' : ''" @click="toggle">{{ linkText }}</a>
+  <p class="expand-link" :class="isActive ? 'active' : ''" @click="toggle">
+    {{ linkText }}
+  </p>
 </template>
 
 <script setup lang="ts">

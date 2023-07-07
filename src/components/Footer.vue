@@ -1,6 +1,13 @@
 <template>
   <div id="footer">
-    <img src="~/assets/img/footer_logo.webp" alt="eXa-Online GmbH">
+    <nuxt-img
+      src="/footer_logo.webp"
+      loading="lazy"
+      alt="eXa-Online GmbH"
+      width="1222"
+      height="170"
+      sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+    />
     <div id="contact-data">
       <p>eXa-Online GmbH</p>
       <p>Kochstraße 138</p>
@@ -25,6 +32,7 @@
   img {
     max-width: 100%;
     width: 40%;
+    object-fit: contain;
   }
 
   p, a, strong {

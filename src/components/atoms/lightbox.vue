@@ -1,6 +1,6 @@
 <template>
   <div class="lightbox">
-    <button class="lightbox-button--open" @click="showLightbox">
+    <button type="button" class="lightbox-button--open" @click="showLightbox">
       {{ props.buttonText }}
     </button>
     <div v-if="lightboxVisible" class="lightbox-content">
