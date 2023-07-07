@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="{ capitalize: props.capitalize, uppercase: props.uppercase }">
+  <button class="button" :class="{ capitalize: props.capitalize, uppercase: props.uppercase, inactive: props.disabled }" :disabled="props.disabled || false">
     <slot />
   </button>
 </template>
@@ -8,6 +8,7 @@
 const props = defineProps<{
   capitalize?: boolean,
   uppercase?: boolean,
+  disabled?: boolean
 }>()
 </script>
 
@@ -24,6 +25,16 @@ const props = defineProps<{
   margin-top: 1rem;
   padding: 1.2rem 2.4rem;
   cursor: pointer;
+
+  &.inactive {
+    color: #{$inactive-cta-color};
+    background-color: white;
+    border: 2px solid #{$inactive-cta-color};
+
+    &:hover {
+      cursor: initial;
+    }
+  }
 
   font-family: 'Rubik';
   font-style: normal;

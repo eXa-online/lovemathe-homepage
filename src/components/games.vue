@@ -8,7 +8,7 @@
     </GamesSection>
     <div class="divider" />
     <GamesSection title="Fördern" :markdown="advancedGameMarkdown">
-      <atoms-button-pill class="inactive" uppercase>
+      <atoms-button-pill disabled uppercase>
         Zum Förderspiel
       </atoms-button-pill>
     </GamesSection>
@@ -38,16 +38,6 @@ $mauli-offset-mult: 0.82;
   position: absolute;
   top: calc(var(--mauli-height) * -1 * $mauli-offset-mult);
   left: 10%;
-}
-
-.inactive {
-  color: lightgray;
-  background-color: white;
-  border: 2px solid lightgray;
-
-  &:hover {
-    cursor: initial;
-  }
 }
 
 .divider {
