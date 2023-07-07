@@ -3,6 +3,7 @@
   src: url(~/assets/fonts/Rubik-Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url(~/assets/fonts/Rubik-Bold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -40,6 +42,17 @@ h2 {
   &.smaller {
     font-size: var(--section-heading-textsize-small);
     line-height: 117.857%;
+  }
+
+  &.like-h3 {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120.28%;
+
+    /* or 67px */
+    text-transform: uppercase;
   }
 }
 

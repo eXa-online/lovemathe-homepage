@@ -1,6 +1,6 @@
 <template>
   <div class="games-section">
-    <h3>{{ props.title }}</h3>
+    <h2 class="like-h3">{{ props.title }}</h2>
     <vue-markdown v-if="props.markdown" :source="props.markdown" />
     <p v-else>
       {{ props.text || "" }}
