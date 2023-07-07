@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="{ capitalize: props.capitalize, uppercase: props.uppercase, inactive: props.disabled }" :disabled="props.disabled || false">
+  <button type="button" class="button" :class="{ capitalize: props.capitalize, uppercase: props.uppercase, inactive: props.disabled }" :disabled="props.disabled || false">
     <slot />
   </button>
 </template>

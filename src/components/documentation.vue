@@ -13,7 +13,7 @@
         class="no-shadow"
         :infinite="false"
         disable-arrows-on-edges
-        :slide-ratio="9/16"
+        :slide-ratio="9 / 16"
         arrows-outside
         aria-label=""
       >
@@ -50,7 +50,7 @@ const slides = [
       mp4: requireVideo('fpc_lm_interview/big.mp4'),
       webm: requireVideo('fpc_lm_interview/big.webm'),
       props: {
-        preload: "none",
+        preload: 'none',
         controls: true
       }
     }

@@ -1,6 +1,13 @@
 <template>
   <div id="footer">
-    <nuxt-img src="/footer_logo.webp" loading="lazy" alt="eXa-Online GmbH" width="1222" height="170" sizes="xs:100vw sm:100vw md:100vw lg:100vw" />
+    <nuxt-img
+      src="/footer_logo.webp"
+      loading="lazy"
+      alt="eXa-Online GmbH"
+      width="1222"
+      height="170"
+      sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+    />
     <div id="contact-data">
       <p>eXa-Online GmbH</p>
       <p>Kochstraße 138</p>

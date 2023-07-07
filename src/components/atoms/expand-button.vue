@@ -1,5 +1,5 @@
 <template>
-  <button class="expand-button" :class="{ active: isActive }" @click="toggle">
+  <button type="button" class="expand-button" :class="{ active: isActive }" @click="toggle">
     {{ buttonText }}
   </button>
 </template>
