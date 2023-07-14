@@ -2,9 +2,11 @@
   <atoms-content-card id="games">
     <img id="mauli" src="~/assets/img/mauli.svg" alt="mauli">
     <GamesSection title="Testen" :markdown="testGameMarkdown">
-      <atoms-button-pill uppercase>
-        Zum Testspiel
-      </atoms-button-pill>
+      <a href="https://preschooltest.lovemathe.de/">
+        <atoms-button-pill uppercase>
+          Zum Testspiel
+        </atoms-button-pill>
+      </a>
     </GamesSection>
     <div class="divider" />
     <GamesSection title="Fördern" :markdown="advancedGameMarkdown">
