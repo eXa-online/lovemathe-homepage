@@ -1,9 +1,9 @@
 <template>
   <div id="about">
     <h2>Über das Projekt</h2>
+    <about-row title="Die Relevanz" markdown="about_us/relevance.md" />
     <about-row title="Die Idee" markdown="about_us/idea.md" />
     <about-row title="Ferry Porsche Challenge" markdown="about_us/ferry_porsche_challenge.md" />
-    <about-row title="Die Relevanz" markdown="about_us/relevance.md" />
   </div>
 </template>
 
