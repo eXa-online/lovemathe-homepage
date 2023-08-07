@@ -51,10 +51,11 @@ export default defineComponent({
   color: white;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   display: inline-block;
   font-family: 'Rubik';
   margin-top: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.4rem;
   padding: 1.2rem;
   cursor: pointer;
