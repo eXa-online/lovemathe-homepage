@@ -10,7 +10,20 @@
         </atoms-lightbox>
       </template>
       <template v-else>
-        <vue-markdown class="manual-row__markdown" :source="expanded ? mdFullText : mdAbstract" />
+        <div class="manual-row__markdown">
+          <vue-markdown
+            v-if="props.markdown"
+            class="manual-row__markdown__content"
+            :source="mdAbstract"
+          />
+          <Collapse :when="isExpanded">
+            <vue-markdown
+              v-if="props.markdown"
+              class="manual-row__markdown__content"
+              :source="mdDetails"
+            />
+          </Collapse>
+        </div>
         <atoms-expand-link
           class="manual-row__expand-button"
           @expand="expand"
@@ -23,6 +36,7 @@
 
 <script setup lang="ts">
 import VueMarkdown from 'vue-markdown-render'
+import { Collapse } from 'vue-collapsed'
 import { defineComponent } from 'vue'
 import { useMarkdownImport } from '~/composables/use-requires'
 
@@ -37,20 +51,20 @@ const props = defineProps<{
 
 const md = requireMarkdown(props.markdown)
 const mdAbstract = md.split('\n\n')[0]
-const mdFullText = md.split('\n\n').join(' ')
+const mdDetails = md.split('\n\n').slice(1).join(' ')
 </script>
 
 <script lang="ts">
 export default defineComponent({
   data () {
-    return { expanded: false }
+    return { isExpanded: false }
   },
   methods: {
     expand () {
-      this.expanded = true
+      this.isExpanded = true
     },
     collapse () {
-      this.expanded = false
+      this.isExpanded = false
     }
   }
 })
