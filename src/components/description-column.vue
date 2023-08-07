@@ -1,17 +1,28 @@
 <template>
   <div class="description-column">
     <h3>{{ title }}</h3>
-    <vue-markdown
-      class="description-column__markdown"
-      :class="{ expanded }"
-      :source="expanded ? mdFullText : mdAbstract"
-    />
+
+    <div class="description-column__markdown">
+      <vue-markdown
+        v-if="props.markdown"
+        class="description-column__markdown__content"
+        :source="mdAbstract"
+      />
+      <Collapse :when="isExpanded">
+        <vue-markdown
+          v-if="props.markdown"
+          class="description-column__markdown__content"
+          :source="mdDetails"
+        />
+      </Collapse>
+    </div>
     <atoms-expand-link @expand="expand" @collapse="collapse" />
   </div>
 </template>
 
 <script setup lang="ts">
 import VueMarkdown from 'vue-markdown-render'
+import { Collapse } from 'vue-collapsed'
 import { defineComponent } from 'vue'
 import { useMarkdownImport } from '~/composables/use-requires'
 
@@ -24,20 +35,20 @@ const props = defineProps<{
 
 const md = props.markdown ? requireMarkdown(props.markdown) : ''
 const mdAbstract = md.split('\n\n')[0]
-const mdFullText = md.split('\n\n').join(' ')
+const mdDetails = md.split('\n\n').slice(1).join(' ')
 </script>
 
 <script lang="ts">
 export default defineComponent({
   data () {
-    return { expanded: false }
+    return { isExpanded: false }
   },
   methods: {
     expand () {
-      this.expanded = true
+      this.isExpanded = true
     },
     collapse () {
-      this.expanded = false
+      this.isExpanded = false
     }
   }
 })
@@ -63,6 +74,18 @@ export default defineComponent({
 
   h3 {
     font-size: var(--sub-heading-textsize-small);
+  }
+}
+</style>
+
+<style lang="scss">
+.description-column__markdown {
+  margin: 20px; // default p tag margin
+}
+
+.description-column__markdown__content {
+  ul {
+    margin: 0;
   }
 }
 </style>
