@@ -91,12 +91,33 @@ export default defineComponent({
 
   background-image: url('~/assets/img/manual-filler-right.svg');
   background-repeat: no-repeat;
+
+  // fallback size and position
+  background-position: 90% 100px;
   background-size: auto 80%;
-  background-position: 90% 100%;
+  @media #{$tab} {
+    // based on estimated row height (collapsed) for tablet
+    background-position: 100% 200px;
+    background-size: auto 300px;
+  }
+  @media #{$desk}, #{$big} {
+    // based on estimated row height (collapsed) for wider formats
+    background-position: 90% 100px;
+    background-size: auto 420px;
+  }
 
   &.inverted {
     background-image: url('~/assets/img/manual-filler-left.svg');
-    background-position: -0 100%;
+    background-position: -0 100%; // fallback position
+
+    @media #{$tab} {
+      // based on estimated row height (collapsed) for tablet
+      background-position: -0 200px;
+    }
+    @media #{$desk}, #{$big} {
+      // based on estimated row height (collapsed) for wider formats
+      background-position: -0 100px;
+    }
     flex-direction: row-reverse;
   }
 
@@ -106,8 +127,7 @@ export default defineComponent({
   }
 
   @media #{$tab} {
-    background-size: auto 50%;
-    background-position: 100% 100%;
+    // background-position: 100% 100%;
   }
 }
 
