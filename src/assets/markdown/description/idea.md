@@ -2,5 +2,5 @@
 
 
 * Es werden verschiedene Bereiche getestet: Vergleichen, Klassifizieren, Zuordnen, Ordnen, Zählen, Zahlenwissen, Zählwörter, Anwenden von Zahlenwissen
-* Arbeit an der Null-Fehler-Grenze (die ersten Level sind leicht zu schaffen)
-* Anhand der erreichten Level kann entschieden werden, ob ein klassischer, intensiver Test empfehlenswert wäre 
+* Arbeit an der Null-Fehler-Grenze (die ersten Puzzle sind leicht zu schaffen)
+* Anhand der gelösten Puzzle kann entschieden werden, ob ein klassischer, intensiver Test empfehlenswert wäre 
