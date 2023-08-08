@@ -2,27 +2,14 @@
   <div class="imprint">
     <h1>Impressum</h1>
     <div class="imprint-data">
-      <div class="imprint-data__column">
-        <p>Verantwortlich für Inhalt und Umsetzung von eXa-online.de:</p>
-        <p>eXa-online GmbH</p>
-        <p>Kochstraße 138</p>
-        <p>04277 Leipzig</p>
-        <p><a href="tel:+493418781754">Tel.:+49 341 8781754</a></p>
-        <p>Fax: +49 341 8781755</p>
-        <p><a href="mailto:info@exa-online.de">info[at]exa-online.de</a></p>
-        <p>Geschäftsführer:</p>
-        <p>Carsten Paul</p>
-      </div>
-      <div class="imprint-data__column">
-        <p>Registergericht:</p>
-        <p>Amtsgericht Leipzig HRB 15180</p>
-        <p>Sitz der Gesellschaft:</p>
-        <p>eXa-online GmbH</p>
-        <p>Kochstraße 138</p>
-        <p>04277 Leipzig</p>
-        <p>Ust.-Id.Nr. gemäß §27a Umsatzsteuergesetz:</p>
-        <p>DE-197342272</p>
-      </div>
+      <vue-markdown
+        class="imprint-data__column"
+        :source="imprintLeft"
+      />
+      <vue-markdown
+        class="imprint-data__column"
+        :source="imprintRight"
+      />
     </div>
     <atoms-button-pill @click="() => router.push({ path: '/' })">
       Zurück zur Startseite
@@ -31,10 +18,14 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter()
-</script>
+import VueMarkdown from 'vue-markdown-render'
+import { useMarkdownImport } from '~/composables/use-requires'
 
-<script lang="ts">
+const router = useRouter()
+const requireMarkdown = useMarkdownImport()
+
+const imprintLeft = requireMarkdown('imprint/imprint_left.md')
+const imprintRight = requireMarkdown('imprint/imprint_right.md')
 </script>
 
 <style lang="scss" scoped>

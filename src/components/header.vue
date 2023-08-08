@@ -2,7 +2,7 @@
   <div id="nav">
     <HeaderBurgerMenu />
     <div id="header-actions">
-      <atoms-button-pill @click="() => router.push({ path: '/impressum' })">
+      <atoms-button-pill @click="() => router.push({ path: '/imprint' })">
         Kontakt
       </atoms-button-pill>
       <HeaderCookieButton id="cookie-button" />
