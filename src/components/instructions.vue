@@ -6,7 +6,7 @@
       title="Auswertung"
       markdown="instruction/evaluation.md"
       inverted
-      button-text="Zum Cheatsheet"
+      button-text="Zur Spielübersicht"
     >
       <template #lightbox>
         <img style="width: 100%;" src="~/assets/img/test_instruction.webp" alt="test instructions">
