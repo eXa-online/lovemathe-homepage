@@ -1,9 +1,8 @@
-Registergericht:
+**Registergericht:**
 
 Amtsgericht Leipzig HRB 15180
 
-
-Sitz der Gesellschaft:
+**Sitz der Gesellschaft:**
 
 eXa-online GmbH
 
@@ -11,7 +10,6 @@ Kochstraße 138
 
 04277 Leipzig
 
+**Ust.-Id.Nr. gemäß §27a Umsatzsteuergesetz:**
 
-Ust.-Id.Nr. gemäß §27a Umsatzsteuergesetz:
-
-DE-197342272 
+DE-197342272
