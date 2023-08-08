@@ -1,7 +1,7 @@
 * Oskar Fibel / Schulvorbereitungsheft (2010)
 * Mathefreunde - {Nord/Süd} - alle Ausgaben / Vorübungen - Die kleinen Mathefreunde; E. Hajek (2010)
 * Die diagnostische Eigenschätzskalen ({DES}) zur Beurteilung des Entwicklungsstandes und der Schulfähigkeit; K. Barth (2005)
-* Bereit für die Schule?: ein Schnellverfahren zur Überprüfung des Lern- und Entwicklungsstandes von Kindern zum Schuleintritt ; Primarstufe; H. Probst (2004)
+* Bereit für die Schule?: ein Schnellverfahren zur Überprüfung des Lern- und Entwicklungsstandes von Kindern zum Schuleintritt; Primarstufe; H. Probst (2004)
 * Reif für die Schule; E. Steffan (2001)
 * Rechenstörungen; S. Kaufmann und S. Wessolowski (2006)
 * Handbuch Rechenschwäche (2017)
