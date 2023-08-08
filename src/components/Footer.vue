@@ -1,8 +1,8 @@
 <template>
   <div id="footer">
-    <img src="~/assets/img/footer_logo.webp" alt="eXa-Online GmbH">
+    <img src="~/assets/img/footer_logo.webp" alt="eXa-online GmbH">
     <div id="contact-data">
-      <p>eXa-Online GmbH</p>
+      <p>eXa-online GmbH</p>
       <p>Kochstraße 138</p>
       <p>04277 Leipzig</p>
       <p><a href="tel:+493418781754">Tel.:+49 341 8781754</a></p>
