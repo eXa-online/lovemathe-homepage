@@ -1,6 +1,10 @@
 <template>
   <div class="imprint">
     <h1>Impressum</h1>
+    <vue-markdown
+      class="imprint-data__column"
+      :source="imprintUpper"
+    />
     <div class="imprint-data">
       <vue-markdown
         class="imprint-data__column"
@@ -26,6 +30,7 @@ const requireMarkdown = useMarkdownImport()
 
 const imprintLeft = requireMarkdown('imprint/imprint_left.md')
 const imprintRight = requireMarkdown('imprint/imprint_right.md')
+const imprintUpper = requireMarkdown('imprint/imprint_upper.md')
 </script>
 
 <style lang="scss" scoped>
