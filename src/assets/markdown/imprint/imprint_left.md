@@ -15,4 +15,4 @@ Fax: +49 341 8781755
 
 **Geschäftsführer:**
 
-Carsten Paul
+Axel Schmidt
