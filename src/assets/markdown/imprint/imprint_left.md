@@ -1,4 +1,4 @@
-**Verantwortlich für Inhalt und Umsetzung von eXa-online.de:**
+**Verantwortlich für Inhalt und Umsetzung von eXa-online.com:**
 
 
 eXa-online GmbH
