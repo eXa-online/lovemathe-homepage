@@ -12,4 +12,4 @@
 
 [Tel.: +49 341 8781754](tel:+493418781754)
 
-[info[at]exa-online.de](mailto:info@exa-online.com)
+[info[at]exa-online.com](mailto:info@exa-online.com)
