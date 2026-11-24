@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <a href="exa-online.com">
+    <a href="https://www.exa-online.com">
       <img src="~/assets/img/footer_logo.webp" alt="eXa-online GmbH">
     </a>
     <div id="contact-data">
