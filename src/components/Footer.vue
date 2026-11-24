@@ -1,6 +1,8 @@
 <template>
   <div id="footer">
-    <img src="~/assets/img/footer_logo.webp" alt="eXa-online GmbH">
+    <a href="exa-online.com">
+      <img src="~/assets/img/footer_logo.webp" alt="eXa-online GmbH">
+    </a>
     <div id="contact-data">
       <p>eXa-online GmbH</p>
       <p>Kochstraße 138</p>
