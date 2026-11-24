@@ -6,7 +6,7 @@
       <p>Kochstraße 138</p>
       <p>04277 Leipzig</p>
       <p><a href="tel:+493418781754">Tel.:+49 341 8781754</a></p>
-      <p><a href="mailto:info@exa-online.de">info[at]exa-online.de</a></p>
+      <p><a href="mailto:info@exa-online.de">info[at]exa-online.com</a></p>
     </div>
   </div>
 </template>
