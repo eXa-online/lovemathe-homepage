@@ -11,7 +11,7 @@ Kochstraße 138
 
 Fax: +49 341 8781755
 
-[info[at]exa-online.de](mailto:info@exa-online.de)
+[info[at]exa-online.com](mailto:info@exa-online.com)
 
 **Geschäftsführer:**
 
